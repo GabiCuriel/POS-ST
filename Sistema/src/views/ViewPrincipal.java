@@ -9,12 +9,12 @@ package views;
  *
  * @author TeddyBear
  */
-public class Principal extends javax.swing.JFrame {
+public class ViewPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form Principal
      */
-    public Principal() {
+    public ViewPrincipal() {
         initComponents();
     }
 
@@ -27,19 +27,20 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        JMB_Menu = new javax.swing.JMenuBar();
+        JM_Catalogos = new javax.swing.JMenu();
+        JMI_Productos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
+        JM_Catalogos.setText("Catalogos");
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        JMI_Productos.setText("Productos");
+        JM_Catalogos.add(JMI_Productos);
 
-        setJMenuBar(jMenuBar1);
+        JMB_Menu.add(JM_Catalogos);
+
+        setJMenuBar(JMB_Menu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,27 +73,28 @@ public class Principal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new ViewPrincipal().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenuBar JMB_Menu;
+    public javax.swing.JMenuItem JMI_Productos;
+    public javax.swing.JMenu JM_Catalogos;
     // End of variables declaration//GEN-END:variables
 }
