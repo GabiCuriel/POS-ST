@@ -21,8 +21,13 @@ public class Main {
         ViewProductos viewProductos = new ViewProductos();
         ControllerProductos controllerProductos = new ControllerProductos(modelProductos, viewProductos);
         
-        Object[] controllers = new Object[2];
+        ModelClientes modelClientes = new ModelClientes();
+        ViewClientes viewClientes = new ViewClientes();
+        ControllerClientes controllerClientes = new ControllerClientes(modelClientes, viewClientes);
+        
+        Object[] controllers = new Object[5];
         controllers[0] = controllerProductos;
+        controllers[1] = controllerClientes;
         
         ModelPrincipal modelPrincipal = new ModelPrincipal();
         ViewPrincipal viewPrincipal = new ViewPrincipal();
