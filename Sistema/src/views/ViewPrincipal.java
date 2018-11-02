@@ -27,12 +27,18 @@ public class ViewPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JL_Background = new javax.swing.JLabel();
         JMB_Menu = new javax.swing.JMenuBar();
         JM_Catalogos = new javax.swing.JMenu();
         JMI_Clientes = new javax.swing.JMenuItem();
         JMI_Productos = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1024, 500));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
+        getContentPane().add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         JM_Catalogos.setText("Catalogos");
 
@@ -45,17 +51,6 @@ public class ViewPrincipal extends javax.swing.JFrame {
         JMB_Menu.add(JM_Catalogos);
 
         setJMenuBar(JMB_Menu);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1024, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 489, Short.MAX_VALUE)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -97,6 +92,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JL_Background;
     public javax.swing.JMenuBar JMB_Menu;
     public javax.swing.JMenuItem JMI_Clientes;
     public javax.swing.JMenuItem JMI_Productos;

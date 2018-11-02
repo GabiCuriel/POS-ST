@@ -29,10 +29,14 @@ public class ViewProductos extends javax.swing.JPanel {
 
         JSP_Tabla = new javax.swing.JScrollPane();
         JT_Inventario = new javax.swing.JTable();
-        JB_Eliminar = new javax.swing.JButton();
-        JB_Modificar = new javax.swing.JButton();
-        JB_Agregar = new javax.swing.JButton();
         JL_Productos = new javax.swing.JLabel();
+        JTF_Busqueda = new javax.swing.JTextField();
+        JB_Buscar = new javax.swing.JButton();
+        JL_NoFerreteria = new javax.swing.JLabel();
+        JL_NoFerreteria1 = new javax.swing.JLabel();
+        JL_Ferreteria3 = new javax.swing.JLabel();
+        JL_TipoUsuario = new javax.swing.JLabel();
+        JL_Usuario = new javax.swing.JLabel();
         JL_Background = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(1024, 500));
@@ -55,38 +59,65 @@ public class ViewProductos extends javax.swing.JPanel {
 
         add(JSP_Tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 82, 943, 340));
 
-        JB_Eliminar.setBackground(new java.awt.Color(255, 153, 0));
-        JB_Eliminar.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
-        JB_Eliminar.setText("Eliminar Producto");
-        add(JB_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 244, -1));
-
-        JB_Modificar.setBackground(new java.awt.Color(255, 153, 0));
-        JB_Modificar.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
-        JB_Modificar.setText("Modificar Producto");
-        add(JB_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 244, -1));
-
-        JB_Agregar.setBackground(new java.awt.Color(255, 153, 0));
-        JB_Agregar.setForeground(new java.awt.Color(255, 204, 51));
-        JB_Agregar.setText("+");
-        add(JB_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, -1, -1));
-
         JL_Productos.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         JL_Productos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JL_Productos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/inventario.png"))); // NOI18N
         add(JL_Productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
 
+        JTF_Busqueda.setBackground(new java.awt.Color(255, 204, 0));
+        JTF_Busqueda.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        add(JTF_Busqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(529, 20, 370, 30));
+
+        JB_Buscar.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JB_Buscar.setText("Buscar");
+        JB_Buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_BuscarActionPerformed(evt);
+            }
+        });
+        add(JB_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 70, -1));
+
+        JL_NoFerreteria.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_NoFerreteria.setText("1");
+        add(JL_NoFerreteria, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, 50, 20));
+
+        JL_NoFerreteria1.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_NoFerreteria1.setText("Ferreteria :");
+        add(JL_NoFerreteria1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 100, 20));
+
+        JL_Ferreteria3.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Ferreteria3.setText("Ferreterias \"Acme\"");
+        add(JL_Ferreteria3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 170, 20));
+
+        JL_TipoUsuario.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_TipoUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_TipoUsuario.setText("Encargado de Ventas");
+        add(JL_TipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 460, 240, 20));
+
+        JL_Usuario.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Usuario.setText("Usuario 12");
+        add(JL_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 170, 20));
+
         JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
         add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 500));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void JB_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_BuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JB_BuscarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton JB_Agregar;
-    public javax.swing.JButton JB_Eliminar;
-    public javax.swing.JButton JB_Modificar;
+    private javax.swing.JButton JB_Buscar;
     private javax.swing.JLabel JL_Background;
+    public javax.swing.JLabel JL_Ferreteria3;
+    public javax.swing.JLabel JL_NoFerreteria;
+    public javax.swing.JLabel JL_NoFerreteria1;
     public javax.swing.JLabel JL_Productos;
+    public javax.swing.JLabel JL_TipoUsuario;
+    public javax.swing.JLabel JL_Usuario;
     public javax.swing.JScrollPane JSP_Tabla;
+    private javax.swing.JTextField JTF_Busqueda;
     public javax.swing.JTable JT_Inventario;
     // End of variables declaration//GEN-END:variables
 }
