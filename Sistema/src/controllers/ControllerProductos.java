@@ -13,34 +13,41 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import models.ModelProductos;
-import views.Productos;
+import views.ViewProductos;
 
 public class ControllerProductos {
-    public ModelProductos modelsProductos;
-    public Productos viewsProductos;
+    public ModelProductos modelProductos;
+    public ViewProductos viewProductos;
     ActionListener actionListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent P) {
-            if (P.getSource() == viewsProductos.jb_Eliminar) {
+            if (P.getSource() == viewProductos.JB_Eliminar) {
                 Delete_producto();
-            } else if (P.getSource() == viewsProductos.jb_Modificar){
+            } else if (P.getSource() == viewProductos.JB_Modificar){
                 Modifica_Producto();
+            } else if (P.getSource() == viewProductos.JB_Agregar){
+                Agregar_Producto();
             }
         }
 
         private void Delete_producto() {
-            
+            System.out.println("Delete");
         }
 
         private void Modifica_Producto() {
-           
+           System.out.println("Modifica");
+        }
+
+        private void Agregar_Producto() {
+            System.out.println("Agrega");
         }
 
     };
 
-    public ControllerProductos(ModelProductos modelsProductos, Productos viewsProductos) {
-        this.modelsProductos = modelsProductos;
-        this.viewsProductos = viewsProductos;
+    public ControllerProductos(ModelProductos modelProductos, ViewProductos viewProductos) {
+        this.modelProductos = modelProductos;
+        this.viewProductos = viewProductos;
+        setActionListener();
         initBD();
     }
 
@@ -48,8 +55,8 @@ public class ControllerProductos {
         
     }
     private void setActionListener() {
-        viewsProductos.jb_Agregar.addActionListener(actionListener);
-        viewsProductos.jb_Modificar.addActionListener(actionListener);
-        viewsProductos.jb_Eliminar.addActionListener(actionListener);
+        viewProductos.JB_Agregar.addActionListener(actionListener);
+        viewProductos.JB_Modificar.addActionListener(actionListener);
+        viewProductos.JB_Eliminar.addActionListener(actionListener);
     }
 }
