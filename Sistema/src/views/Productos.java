@@ -27,19 +27,66 @@ public class Productos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jb_Eliminar = new javax.swing.JButton();
+        jb_Modificar = new javax.swing.JButton();
+        jb_Agregar = new javax.swing.JButton();
+        jl_Productos = new javax.swing.JLabel();
+        jl_Background = new javax.swing.JLabel();
+
+        setMinimumSize(new java.awt.Dimension(1024, 500));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable1.setBackground(new java.awt.Color(255, 204, 51));
+        jTable1.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nombre", "SKU", "Precio", "Marca", "Tipo", "Proveedor", "Cantidad"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 82, 943, 340));
+
+        jb_Eliminar.setBackground(new java.awt.Color(255, 153, 0));
+        jb_Eliminar.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        jb_Eliminar.setText("Eliminar Producto");
+        add(jb_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 244, -1));
+
+        jb_Modificar.setBackground(new java.awt.Color(255, 153, 0));
+        jb_Modificar.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        jb_Modificar.setText("Modificar Producto");
+        add(jb_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 244, -1));
+
+        jb_Agregar.setBackground(new java.awt.Color(255, 153, 0));
+        jb_Agregar.setForeground(new java.awt.Color(255, 204, 51));
+        jb_Agregar.setText("+");
+        add(jb_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, -1, -1));
+
+        jl_Productos.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        jl_Productos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jl_Productos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/inventario.png"))); // NOI18N
+        add(jl_Productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 210, 50));
+
+        jl_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Wall_Soul.jpg"))); // NOI18N
+        add(jl_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 500));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable jTable1;
+    public javax.swing.JButton jb_Agregar;
+    public javax.swing.JButton jb_Eliminar;
+    public javax.swing.JButton jb_Modificar;
+    private javax.swing.JLabel jl_Background;
+    public javax.swing.JLabel jl_Productos;
     // End of variables declaration//GEN-END:variables
 }
