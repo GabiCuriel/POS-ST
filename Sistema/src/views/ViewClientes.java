@@ -7,20 +7,12 @@ package views;
 
 /**
  *
-<<<<<<< HEAD
- * @author Juan Pablo
-=======
  * @author TeddyBear
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
  */
 public class ViewClientes extends javax.swing.JPanel {
 
     /**
-<<<<<<< HEAD
-     * Creates new form ViewClientes
-=======
      * Creates new form Clientes
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
      */
     public ViewClientes() {
         initComponents();
@@ -35,57 +27,6 @@ public class ViewClientes extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
-        jScrollPane1 = new javax.swing.JScrollPane();
-        JT_Empleados = new javax.swing.JTable();
-        JB_AgregarEmpleado = new javax.swing.JButton();
-        JB_EliminarEmpleado = new javax.swing.JButton();
-        JB_ModificarEmpleado = new javax.swing.JButton();
-        JL_Clientes = new javax.swing.JLabel();
-        JL_Background = new javax.swing.JLabel();
-
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        JT_Empleados.setBackground(new java.awt.Color(255, 204, 51));
-        JT_Empleados.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-        JT_Empleados.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "ID", "Nombre", "Apellido Paterno", "Apellido Materno", "Telefono", "RFC", "Dirección", "ID Banco", "NSS", "ID Ferreteria"
-            }
-        ));
-        jScrollPane1.setViewportView(JT_Empleados);
-
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 82, 943, 340));
-
-        JB_AgregarEmpleado.setBackground(new java.awt.Color(255, 153, 0));
-        JB_AgregarEmpleado.setForeground(new java.awt.Color(255, 204, 51));
-        JB_AgregarEmpleado.setText("+");
-        add(JB_AgregarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, -1, -1));
-
-        JB_EliminarEmpleado.setBackground(new java.awt.Color(255, 153, 0));
-        JB_EliminarEmpleado.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
-        JB_EliminarEmpleado.setText("Eliminar Empleado");
-        add(JB_EliminarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 244, -1));
-
-        JB_ModificarEmpleado.setBackground(new java.awt.Color(255, 153, 0));
-        JB_ModificarEmpleado.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
-        JB_ModificarEmpleado.setText("Modificar Empleado");
-        add(JB_ModificarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 244, -1));
-
-        JL_Clientes.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
-        JL_Clientes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Clientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/empleados.png"))); // NOI18N
-        add(JL_Clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
-
-        JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
-        add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 510));
-=======
         JB_Eliminar = new javax.swing.JButton();
         JB_Agregar = new javax.swing.JButton();
         JB_Modificar = new javax.swing.JButton();
@@ -131,24 +72,13 @@ public class ViewClientes extends javax.swing.JPanel {
                             .addComponent(jButton4))))
                 .addContainerGap(254, Short.MAX_VALUE))
         );
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
-    public javax.swing.JButton JB_AgregarEmpleado;
-    public javax.swing.JButton JB_EliminarEmpleado;
-    public javax.swing.JButton JB_ModificarEmpleado;
-    private javax.swing.JLabel JL_Background;
-    public javax.swing.JLabel JL_Clientes;
-    public javax.swing.JTable JT_Empleados;
-    public javax.swing.JScrollPane jScrollPane1;
-=======
     public javax.swing.JButton JB_Agregar;
     public javax.swing.JButton JB_Eliminar;
     public javax.swing.JButton JB_Modificar;
     public javax.swing.JButton jButton4;
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
     // End of variables declaration//GEN-END:variables
 }
