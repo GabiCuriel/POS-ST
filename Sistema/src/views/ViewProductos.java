@@ -28,7 +28,7 @@ public class ViewProductos extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        JT_Productos = new javax.swing.JTable();
         JB_Eliminar = new javax.swing.JButton();
         JB_Modificar = new javax.swing.JButton();
         JB_Agregar = new javax.swing.JButton();
@@ -38,9 +38,9 @@ public class ViewProductos extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(1024, 500));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setBackground(new java.awt.Color(255, 204, 51));
-        jTable1.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        JT_Productos.setBackground(new java.awt.Color(255, 204, 51));
+        JT_Productos.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JT_Productos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -51,7 +51,7 @@ public class ViewProductos extends javax.swing.JPanel {
                 "ID", "Nombre", "SKU", "Precio", "Marca", "Tipo", "Proveedor", "Cantidad"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(JT_Productos);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 82, 943, 340));
 
@@ -73,7 +73,7 @@ public class ViewProductos extends javax.swing.JPanel {
         jl_Productos.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         jl_Productos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jl_Productos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/inventario.png"))); // NOI18N
-        add(jl_Productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 210, 50));
+        add(jl_Productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
 
         jl_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
         add(jl_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 500));
@@ -84,8 +84,8 @@ public class ViewProductos extends javax.swing.JPanel {
     public javax.swing.JButton JB_Agregar;
     public javax.swing.JButton JB_Eliminar;
     public javax.swing.JButton JB_Modificar;
+    public javax.swing.JTable JT_Productos;
     public javax.swing.JScrollPane jScrollPane1;
-    public javax.swing.JTable jTable1;
     private javax.swing.JLabel jl_Background;
     public javax.swing.JLabel jl_Productos;
     // End of variables declaration//GEN-END:variables
