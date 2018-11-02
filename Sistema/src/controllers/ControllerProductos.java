@@ -21,7 +21,7 @@ public class ControllerProductos {
     ActionListener actionListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent P) {
-            if (P.getSource() == viewProductos) {
+            if (P.getSource() == viewProductos.JB_Eliminar) {
                 Delete_producto();
             } else if (P.getSource() == viewProductos.JB_Modificar){
                 Modifica_Producto();
@@ -31,15 +31,15 @@ public class ControllerProductos {
         }
 
         private void Delete_producto() {
-            System.out.println("Delete");
+            System.out.println("Delete - productos");
         }
 
         private void Modifica_Producto() {
-           System.out.println("Modifica");
+           System.out.println("Modifica - productos");
         }
 
         private void Agregar_Producto() {
-            System.out.println("Agrega");
+            System.out.println("Agrega - productos");
         }
 
     };

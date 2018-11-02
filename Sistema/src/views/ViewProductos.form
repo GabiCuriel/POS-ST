@@ -23,7 +23,7 @@
     <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+    <Container class="javax.swing.JScrollPane" name="JSP_Tabla">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
@@ -36,7 +36,11 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
+<<<<<<< HEAD
         <Component class="javax.swing.JTable" name="JT_Productos">
+=======
+        <Component class="javax.swing.JTable" name="JT_Inventario">
+>>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -116,7 +120,7 @@
           <Color blue="0" green="99" red="ff" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic Light" size="18" style="0"/>
+          <Font name="Yu Gothic Light" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Eliminar Producto"/>
       </Properties>
@@ -135,7 +139,7 @@
           <Color blue="0" green="99" red="ff" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Yu Gothic Light" size="18" style="0"/>
+          <Font name="Yu Gothic Light" size="18" style="1"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Modificar Producto"/>
       </Properties>
@@ -167,7 +171,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jl_Productos">
+    <Component class="javax.swing.JLabel" name="JL_Productos">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Yu Gothic Light" size="18" style="0"/>
@@ -186,7 +190,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jl_Background">
+    <Component class="javax.swing.JLabel" name="JL_Background">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/fondo.jpg"/>
