@@ -21,7 +21,7 @@ public class ControllerProductos {
     ActionListener actionListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent P) {
-            if (P.getSource() == viewProductos.JB_Eliminar) {
+            if (P.getSource() == viewProductos) {
                 Delete_producto();
             } else if (P.getSource() == viewProductos.JB_Modificar){
                 Modifica_Producto();

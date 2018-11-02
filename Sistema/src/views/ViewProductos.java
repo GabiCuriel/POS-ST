@@ -27,46 +27,56 @@ public class ViewProductos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         JB_Eliminar = new javax.swing.JButton();
         JB_Modificar = new javax.swing.JButton();
         JB_Agregar = new javax.swing.JButton();
+        jl_Productos = new javax.swing.JLabel();
+        jl_Background = new javax.swing.JLabel();
 
-        JB_Eliminar.setText("Eliminar");
+        setMinimumSize(new java.awt.Dimension(1024, 500));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JB_Modificar.setText("Modificar");
+        jTable1.setBackground(new java.awt.Color(255, 204, 51));
+        jTable1.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID", "Nombre", "SKU", "Precio", "Marca", "Tipo", "Proveedor", "Cantidad"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
 
-        JB_Agregar.setText("Agregar");
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 82, 943, 340));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(356, 356, 356)
-                .addComponent(JB_Eliminar)
-                .addGap(43, 43, 43)
-                .addComponent(JB_Agregar)
-                .addContainerGap(465, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(251, 251, 251)
-                    .addComponent(JB_Modificar)
-                    .addContainerGap(686, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JB_Eliminar)
-                    .addComponent(JB_Agregar))
-                .addContainerGap(381, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(94, 94, 94)
-                    .addComponent(JB_Modificar)
-                    .addContainerGap(380, Short.MAX_VALUE)))
-        );
+        JB_Eliminar.setBackground(new java.awt.Color(255, 153, 0));
+        JB_Eliminar.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        JB_Eliminar.setText("Eliminar Producto");
+        add(JB_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 244, -1));
+
+        JB_Modificar.setBackground(new java.awt.Color(255, 153, 0));
+        JB_Modificar.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        JB_Modificar.setText("Modificar Producto");
+        add(JB_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 244, -1));
+
+        JB_Agregar.setBackground(new java.awt.Color(255, 153, 0));
+        JB_Agregar.setForeground(new java.awt.Color(255, 204, 51));
+        JB_Agregar.setText("+");
+        add(JB_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 10, -1, -1));
+
+        jl_Productos.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        jl_Productos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jl_Productos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/inventario.png"))); // NOI18N
+        add(jl_Productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 210, 50));
+
+        jl_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
+        add(jl_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 500));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -74,5 +84,9 @@ public class ViewProductos extends javax.swing.JPanel {
     public javax.swing.JButton JB_Agregar;
     public javax.swing.JButton JB_Eliminar;
     public javax.swing.JButton JB_Modificar;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JTable jTable1;
+    private javax.swing.JLabel jl_Background;
+    public javax.swing.JLabel jl_Productos;
     // End of variables declaration//GEN-END:variables
 }
