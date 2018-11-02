@@ -36,11 +36,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-<<<<<<< HEAD
-        <Component class="javax.swing.JTable" name="JT_Productos">
-=======
         <Component class="javax.swing.JTable" name="JT_Inventario">
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
