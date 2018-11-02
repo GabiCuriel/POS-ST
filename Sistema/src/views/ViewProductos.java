@@ -56,12 +56,12 @@ public class ViewProductos extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 82, 943, 340));
 
         JB_Eliminar.setBackground(new java.awt.Color(255, 153, 0));
-        JB_Eliminar.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        JB_Eliminar.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
         JB_Eliminar.setText("Eliminar Producto");
         add(JB_Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 244, -1));
 
         JB_Modificar.setBackground(new java.awt.Color(255, 153, 0));
-        JB_Modificar.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        JB_Modificar.setFont(new java.awt.Font("Yu Gothic Light", 1, 18)); // NOI18N
         JB_Modificar.setText("Modificar Producto");
         add(JB_Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 244, -1));
 
@@ -73,7 +73,7 @@ public class ViewProductos extends javax.swing.JPanel {
         jl_Productos.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         jl_Productos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jl_Productos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/inventario.png"))); // NOI18N
-        add(jl_Productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 210, 50));
+        add(jl_Productos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
 
         jl_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
         add(jl_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 500));
