@@ -7,22 +7,14 @@ package views;
 
 /**
  *
-<<<<<<< HEAD
  * @author Juan Pablo
-=======
- * @author TeddyBear
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
  */
-public class ViewClientes extends javax.swing.JPanel {
+public class ViewEmpleados extends javax.swing.JPanel {
 
     /**
-<<<<<<< HEAD
-     * Creates new form ViewClientes
-=======
-     * Creates new form Clientes
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
+     * Creates new form ViewEmpleados
      */
-    public ViewClientes() {
+    public ViewEmpleados() {
         initComponents();
     }
 
@@ -35,13 +27,12 @@ public class ViewClientes extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
         jScrollPane1 = new javax.swing.JScrollPane();
         JT_Empleados = new javax.swing.JTable();
         JB_AgregarEmpleado = new javax.swing.JButton();
         JB_EliminarEmpleado = new javax.swing.JButton();
         JB_ModificarEmpleado = new javax.swing.JButton();
-        JL_Clientes = new javax.swing.JLabel();
+        JL_Empleados = new javax.swing.JLabel();
         JL_Background = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -78,77 +69,23 @@ public class ViewClientes extends javax.swing.JPanel {
         JB_ModificarEmpleado.setText("Modificar Empleado");
         add(JB_ModificarEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, 244, -1));
 
-        JL_Clientes.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
-        JL_Clientes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Clientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/empleados.png"))); // NOI18N
-        add(JL_Clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
+        JL_Empleados.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        JL_Empleados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_Empleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/empleados.png"))); // NOI18N
+        add(JL_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
 
         JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
         add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 510));
-=======
-        JB_Eliminar = new javax.swing.JButton();
-        JB_Agregar = new javax.swing.JButton();
-        JB_Modificar = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-
-        JB_Eliminar.setText("jButton1");
-
-        JB_Agregar.setText("jButton1");
-
-        JB_Modificar.setText("jButton1");
-
-        jButton4.setText("jButton1");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(153, 153, 153)
-                .addComponent(JB_Eliminar)
-                .addGap(52, 52, 52)
-                .addComponent(JB_Agregar)
-                .addGap(80, 80, 80)
-                .addComponent(JB_Modificar)
-                .addGap(51, 51, 51)
-                .addComponent(jButton4)
-                .addContainerGap(364, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(JB_Eliminar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(210, 210, 210)
-                        .addComponent(JB_Agregar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(199, 199, 199)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(JB_Modificar)
-                            .addComponent(jButton4))))
-                .addContainerGap(254, Short.MAX_VALUE))
-        );
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
     public javax.swing.JButton JB_AgregarEmpleado;
     public javax.swing.JButton JB_EliminarEmpleado;
     public javax.swing.JButton JB_ModificarEmpleado;
     private javax.swing.JLabel JL_Background;
-    public javax.swing.JLabel JL_Clientes;
+    public javax.swing.JLabel JL_Empleados;
     public javax.swing.JTable JT_Empleados;
     public javax.swing.JScrollPane jScrollPane1;
-=======
-    public javax.swing.JButton JB_Agregar;
-    public javax.swing.JButton JB_Eliminar;
-    public javax.swing.JButton JB_Modificar;
-    public javax.swing.JButton jButton4;
->>>>>>> 887c636c3ca923210eb46455a1dd6f3420502bbb
     // End of variables declaration//GEN-END:variables
 }
