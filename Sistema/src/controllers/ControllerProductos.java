@@ -21,13 +21,13 @@ public class ControllerProductos {
     ActionListener actionListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent P) {
-            if (P.getSource() == viewProductos.JB_Eliminar) {
-                Delete_producto();
-            } else if (P.getSource() == viewProductos.JB_Modificar){
-                Modifica_Producto();
-            } else if (P.getSource() == viewProductos.JB_Agregar){
-                Agregar_Producto();
-            }
+       //     if (P.getSource() == viewProductos.JB_Eliminar) {
+         //       Delete_producto();
+        //    } else if (P.getSource() == viewProductos.JB_Modificar){
+          //      Modifica_Producto();
+          //  } else if (P.getSource() == viewProductos.JB_Agregar){
+            //    Agregar_Producto();
+          //  }
         }
 
         private void Delete_producto() {
@@ -55,8 +55,8 @@ public class ControllerProductos {
         
     }
     private void setActionListener() {
-        viewProductos.JB_Agregar.addActionListener(actionListener);
-        viewProductos.JB_Modificar.addActionListener(actionListener);
-        viewProductos.JB_Eliminar.addActionListener(actionListener);
+//        viewProductos.JB_Agregar.addActionListener(actionListener);
+  //      viewProductos.JB_Modificar.addActionListener(actionListener);
+    //    viewProductos.JB_Eliminar.addActionListener(actionListener);
     }
 }
