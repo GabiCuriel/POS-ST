@@ -31,22 +31,37 @@ public class ViewPrincipal extends javax.swing.JFrame {
         JMB_Menu = new javax.swing.JMenuBar();
         JM_Catalogos = new javax.swing.JMenu();
         JMI_Clientes = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        JMI_Empleados = new javax.swing.JMenuItem();
+        JMI_Proveedores = new javax.swing.JMenuItem();
         JMI_Productos = new javax.swing.JMenuItem();
+        JMI_Usuarios = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1024, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
-        getContentPane().add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 580));
 
         JM_Catalogos.setText("Catalogos");
 
         JMI_Clientes.setText("Clientes");
         JM_Catalogos.add(JMI_Clientes);
 
+        jMenu1.setText("jMenu1");
+        JM_Catalogos.add(jMenu1);
+
+        JMI_Empleados.setText("Empleados");
+        JM_Catalogos.add(JMI_Empleados);
+
+        JMI_Proveedores.setText("Proveedores");
+        JM_Catalogos.add(JMI_Proveedores);
+
         JMI_Productos.setText("Productos");
         JM_Catalogos.add(JMI_Productos);
+
+        JMI_Usuarios.setText("Usuarios");
+        JM_Catalogos.add(JMI_Usuarios);
 
         JMB_Menu.add(JM_Catalogos);
 
@@ -95,7 +110,11 @@ public class ViewPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel JL_Background;
     public javax.swing.JMenuBar JMB_Menu;
     public javax.swing.JMenuItem JMI_Clientes;
+    public javax.swing.JMenuItem JMI_Empleados;
     public javax.swing.JMenuItem JMI_Productos;
+    public javax.swing.JMenuItem JMI_Proveedores;
+    public javax.swing.JMenuItem JMI_Usuarios;
     public javax.swing.JMenu JM_Catalogos;
+    private javax.swing.JMenu jMenu1;
     // End of variables declaration//GEN-END:variables
 }
