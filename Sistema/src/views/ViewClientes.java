@@ -56,7 +56,7 @@ public class ViewClientes extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(JT_Clientes);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 82, 943, 340));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(39, 82, 943, 420));
 
         JL_Empleados.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         JL_Empleados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -78,27 +78,27 @@ public class ViewClientes extends javax.swing.JPanel {
 
         JL_NoFerreteria.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_NoFerreteria.setText("1");
-        add(JL_NoFerreteria, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, 50, 20));
+        add(JL_NoFerreteria, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 50, 20));
 
         JL_NoFerreteria1.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_NoFerreteria1.setText("Ferreteria :");
-        add(JL_NoFerreteria1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 100, 20));
+        add(JL_NoFerreteria1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 100, 20));
 
         JL_Ferreteria3.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_Ferreteria3.setText("Ferreterias \"Acme\"");
-        add(JL_Ferreteria3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 170, 20));
+        add(JL_Ferreteria3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 170, 20));
 
         JL_TipoUsuario.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_TipoUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JL_TipoUsuario.setText("Encargado de Ventas");
-        add(JL_TipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 460, 240, 20));
+        add(JL_TipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 540, 240, 20));
 
         JL_Usuario.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_Usuario.setText("Usuario 12");
-        add(JL_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 430, 170, 20));
+        add(JL_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 510, 170, 20));
 
         JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
-        add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 510));
+        add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 580));
     }// </editor-fold>//GEN-END:initComponents
 
     private void JB_BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_BuscarActionPerformed

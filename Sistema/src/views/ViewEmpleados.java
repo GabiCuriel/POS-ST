@@ -107,15 +107,15 @@ public class ViewEmpleados extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JB_Buscar;
-    private javax.swing.JLabel JL_Background;
+    public javax.swing.JButton JB_Buscar;
+    public javax.swing.JLabel JL_Background;
     public javax.swing.JLabel JL_Empleados;
     public javax.swing.JLabel JL_Ferreteria3;
     public javax.swing.JLabel JL_NoFerreteria;
     public javax.swing.JLabel JL_NoFerreteria1;
     public javax.swing.JLabel JL_TipoUsuario;
     public javax.swing.JLabel JL_Usuario;
-    private javax.swing.JTextField JTF_Busqueda;
+    public javax.swing.JTextField JTF_Busqueda;
     public javax.swing.JTable JT_Empleados;
     public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

@@ -5,8 +5,7 @@
  */
 package controllers;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import views.*;
 import models.*;
 /**
@@ -20,8 +19,12 @@ public class ControllerPrincipal {
     
     private Object controllers[];
     
-    private ControllerProductos controllerProductos;
     private ControllerClientes controllerClientes;
+    private ControllerDirecciones controllerDirecciones;
+    private ControllerEmpleados controllerEmpleados;
+    private ControllerProductos controllerProductos;
+    private ControllerProveedores controllerProveedores;
+    private ControllerUsuarios controllerUsuarios;
     
     public ControllerPrincipal(ModelPrincipal modelPrincipal, ViewPrincipal viewPrincipal, Object[] controllers){
         this.modelPrincipal = modelPrincipal;
@@ -31,10 +34,16 @@ public class ControllerPrincipal {
         setActionListener();
         initComponents();
     }
+    
     private void setControllers(){
-        controllerProductos = (ControllerProductos) controllers[0];
-        controllerClientes = (ControllerClientes) controllers[1];
+        controllerClientes = (ControllerClientes) controllers[0];
+        //controllerDirecciones = (ControllerDirecciones) controllers[1];
+        controllerEmpleados = (ControllerEmpleados) controllers[1];
+        controllerProductos = (ControllerProductos) controllers[2];
+        controllerProveedores = (ControllerProveedores) controllers[3];
+        controllerUsuarios = (ControllerUsuarios) controllers[4];
     }
+    
     private void initComponents(){
         viewPrincipal.setTitle("SOUL TECH - FERRETERIAS ACME");
         viewPrincipal.setLocationRelativeTo(null);
@@ -42,22 +51,47 @@ public class ControllerPrincipal {
     }
     
     private void setActionListener(){
-        viewPrincipal.JMI_Productos.addActionListener(actionListener);
         viewPrincipal.JMI_Clientes.addActionListener(actionListener);
+        viewPrincipal.JMI_Empleados.addActionListener(actionListener);
+        viewPrincipal.JMI_Productos.addActionListener(actionListener);
+        viewPrincipal.JMI_Proveedores.addActionListener(actionListener);
+        viewPrincipal.JMI_Empleados.addActionListener(actionListener);
+        
     }
     
     private final ActionListener actionListener = new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (e.getSource() == viewPrincipal.JMI_Productos){
-                System.out.println("Accion principal - productos");
-                jmi_productos_actionPerformed();
-            } else if (e.getSource() == viewPrincipal.JMI_Clientes){
+            if (e.getSource() == viewPrincipal.JMI_Clientes){
                 System.out.println("Accion principal - clientes");
                 jmi_clientes_actionPerformed();
+            } else if (e.getSource() == viewPrincipal.JMI_Empleados){
+                System.out.println("Accion principal - empleados");
+                jmi_empleados_actionPerformed();
+            } else if (e.getSource() == viewPrincipal.JMI_Productos){
+                System.out.println("Accion principal - productos");
+                jmi_productos_actionPerformed();
+            } else if (e.getSource() == viewPrincipal.JMI_Proveedores){
+                System.out.println("Accion principal - proveedores");
+                jmi_proveedores_actionPerformed();
+            } else if (e.getSource() == viewPrincipal.JMI_Usuarios){
+                System.out.println("Accion principal - usuarios");
+                jmi_usuarios_actionPerformed();
             }
         }
     };
+    
+    private void jmi_clientes_actionPerformed(){
+        viewPrincipal.setContentPane(controllerClientes.viewClientes);
+        viewPrincipal.revalidate();
+        viewPrincipal.repaint();
+    }
+    
+    private void jmi_empleados_actionPerformed(){
+        viewPrincipal.setContentPane(controllerEmpleados.viewEmpleados);
+        viewPrincipal.revalidate();
+        viewPrincipal.repaint();
+    }
     
     private void jmi_productos_actionPerformed(){
         viewPrincipal.setContentPane(controllerProductos.viewProductos);
@@ -65,9 +99,18 @@ public class ControllerPrincipal {
         viewPrincipal.repaint();
     }
     
-    private void jmi_clientes_actionPerformed(){
+    private void jmi_proveedores_actionPerformed(){
+        viewPrincipal.setContentPane(controllerProveedores.viewProveedores);
+        viewPrincipal.revalidate();
+        viewPrincipal.repaint();
+    }
+    
+    private void jmi_usuarios_actionPerformed(){
         viewPrincipal.setContentPane(controllerClientes.viewClientes);
         viewPrincipal.revalidate();
         viewPrincipal.repaint();
     }
+    
 }
+
+
