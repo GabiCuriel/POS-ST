@@ -19,13 +19,13 @@ public class ControllerClientes {
     ActionListener actionListner = new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent CL) {
-            if (CL.getSource() == viewClientes.JB_Eliminar) {
-                Delete_cliente();
-            } else if (CL.getSource() == viewClientes.JB_Modificar){
-                Modifica_cliente();
-            } else if (CL.getSource() == viewClientes.JB_Agregar){
-                Agregar_cliente();
-            }
+     //       if (CL.getSource() == viewClientes.JB_Eliminar) {
+       //         Delete_cliente();
+         //   } else if (CL.getSource() == viewClientes.JB_Modificar){
+           //     Modifica_cliente();
+      //      } else if (CL.getSource() == viewClientes.JB_Agregar){
+        //        Agregar_cliente();
+          //  }
         }
     };
     
@@ -50,10 +50,10 @@ public class ControllerClientes {
     }
 
     private void setActionListener() {
-        viewClientes.JB_Agregar.addActionListener(actionListner);
-        viewClientes.JB_Eliminar.addActionListener(actionListner);
-        viewClientes.JB_Modificar.addActionListener(actionListner);
-        viewClientes.jButton4.addActionListener(actionListner);
+  //      viewClientes.JB_Agregar.addActionListener(actionListner);
+    //    viewClientes.JB_Eliminar.addActionListener(actionListner);
+      //  viewClientes.JB_Modificar.addActionListener(actionListner);
+       // viewClientes.jButton4.addActionListener(actionListner);
                 
     }
 
