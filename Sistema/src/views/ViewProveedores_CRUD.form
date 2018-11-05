@@ -25,13 +25,13 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="40" y="420" width="943" height="90"/>
+          <AbsoluteConstraints x="40" y="370" width="943" height="130"/>
         </Constraint>
       </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="JT_Empleados">
+        <Component class="javax.swing.JTable" name="JT_Proveedores">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="cc" red="ff" type="rgb"/>
@@ -40,52 +40,16 @@
               <Font name="Yu Gothic" size="11" style="0"/>
             </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="11" rowCount="4">
+              <Table columnCount="5" rowCount="4">
                 <Column editable="true" title="ID" type="java.lang.Object"/>
                 <Column editable="true" title="Nombre" type="java.lang.Object"/>
-                <Column editable="true" title="Apellido Paterno" type="java.lang.Object"/>
-                <Column editable="true" title="Apellido Materno" type="java.lang.Object"/>
                 <Column editable="true" title="Telefono" type="java.lang.Object"/>
-                <Column editable="true" title="RFC" type="java.lang.Object"/>
-                <Column editable="true" title="CURP" type="java.lang.Object"/>
                 <Column editable="true" title="Direcci&#xf3;n" type="java.lang.Object"/>
-                <Column editable="true" title="Banco" type="java.lang.Object"/>
-                <Column editable="true" title="NSS" type="java.lang.Object"/>
-                <Column editable="true" title="Ferreteria" type="java.lang.Object"/>
+                <Column editable="true" title="E-Mail" type="java.lang.Object"/>
               </Table>
             </Property>
             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
               <TableColumnModel selectionModel="0">
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
-                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                  <Title/>
-                  <Editor/>
-                  <Renderer/>
-                </Column>
                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                   <Title/>
                   <Editor/>
@@ -130,7 +94,7 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Images/empleados.png"/>
+          <Image iconType="3" name="/Images/clientes.png"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -138,7 +102,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="40" y="0" width="210" height="50"/>
+          <AbsoluteConstraints x="40" y="10" width="210" height="50"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -270,73 +234,34 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="40" y="50" width="520" height="370"/>
+          <AbsoluteConstraints x="40" y="60" width="520" height="300"/>
         </Constraint>
       </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="JL_ID" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                              <Component id="JL_Nombre" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                              <Component id="JL_AP" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                              <Component id="JL_AM" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                              <Component id="JL_Telefono" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                              <Component id="JL_RFC" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                              <Component id="JL_Payback" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                  <Component id="JL_Direccion" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                                  <Component id="JL_Banco" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="JTF_ID" alignment="0" max="32767" attributes="0"/>
-                              <Component id="JTF_Nombre" alignment="1" max="32767" attributes="0"/>
-                              <Component id="JTF_AP" alignment="0" max="32767" attributes="0"/>
-                              <Component id="JTF_AM" alignment="0" max="32767" attributes="0"/>
-                              <Component id="JTF_Telefono" alignment="1" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="JTF_Email" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="JTF_Payback" alignment="0" pref="192" max="32767" attributes="0"/>
-                                          <Component id="JTF_RFC" alignment="0" max="32767" attributes="0"/>
-                                      </Group>
-                                      <Component id="JTF_Direccion" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="JB_Direccion" pref="136" max="32767" attributes="0"/>
-                                      <Component id="JB_RFC" max="32767" attributes="0"/>
-                                      <Component id="JB_CURP" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="JB_Banco" alignment="1" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="JL_ID" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                      <Component id="JL_Nombre" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                      <Component id="JL_Telefono" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Component id="JL_Direccion" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
+                          <Component id="JL_Email" alignment="0" min="-2" pref="145" max="-2" attributes="0"/>
                       </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="JTF_ID" alignment="0" max="32767" attributes="0"/>
+                      <Component id="JTF_Nombre" alignment="1" max="32767" attributes="0"/>
+                      <Component id="JTF_Telefono" alignment="1" max="32767" attributes="0"/>
+                      <Component id="JTF_Email" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="JL_NSS" min="-2" pref="145" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="JTF_NSS" max="32767" attributes="0"/>
-                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Component id="JL_Ferreteria" min="-2" pref="145" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="JTF_Banco" min="-2" pref="193" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="JB_Ferreteria" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="JTF_Direccion" min="-2" pref="192" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="JB_Direccion" pref="124" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -347,84 +272,32 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Group type="103" groupAlignment="1" attributes="0">
-                                              <Group type="102" alignment="1" attributes="0">
-                                                  <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="JL_ID" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                                                      <Component id="JTF_ID" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                                  <Component id="JTF_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="JL_Nombre" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                          <Component id="JTF_AP" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="JL_AP" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              </Group>
-                              <Component id="JTF_AM" alignment="1" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="JL_Telefono" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="JTF_Telefono" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="JL_RFC" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="JTF_RFC" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="JB_RFC" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
-                          <Component id="JL_AM" min="-2" pref="21" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="JTF_Payback" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="JL_Payback" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="JB_CURP" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="JL_Banco" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="JTF_Email" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="JB_Banco" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
+                      <Component id="JL_ID" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="JTF_ID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="JL_Nombre" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="JTF_Nombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="JL_Telefono" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="JTF_Telefono" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="JL_Email" min="-2" pref="19" max="-2" attributes="0"/>
+                      <Component id="JTF_Email" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="JL_Direccion" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                       <Component id="JTF_Direccion" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="JB_Direccion" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="JL_Direccion" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="9" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="JTF_NSS" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="JL_NSS" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="JTF_Banco" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="JL_Ferreteria" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="JB_Ferreteria" alignment="3" min="-2" pref="21" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace pref="33" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -462,38 +335,6 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="JL_AP">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="cc" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="18" style="0"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Apellido Paterno"/>
-            <Property name="opaque" type="boolean" value="true"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="JL_AM">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="cc" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="18" style="0"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Apellido Materno"/>
-            <Property name="opaque" type="boolean" value="true"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
-        </Component>
         <Component class="javax.swing.JLabel" name="JL_Telefono">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -510,7 +351,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="JL_RFC">
+        <Component class="javax.swing.JLabel" name="JL_Email">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="cc" red="ff" type="rgb"/>
@@ -519,39 +360,7 @@
               <Font name="Yu Gothic" size="18" style="0"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="RFC"/>
-            <Property name="opaque" type="boolean" value="true"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="JL_Payback">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="cc" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="18" style="0"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="CURP"/>
-            <Property name="opaque" type="boolean" value="true"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JLabel" name="JL_Banco">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="cc" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="18" style="0"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Banco"/>
+            <Property name="text" type="java.lang.String" value="Email"/>
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
           <AuxValues>
@@ -574,14 +383,6 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="JB_RFC">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="12" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Generar"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="JTF_ID">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -599,35 +400,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="JTF_AP">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="11" style="0"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="JTF_AM">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="11" style="0"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="JTF_Telefono">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="11" style="0"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="JTF_RFC">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="11" style="0"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="JTF_Payback">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Yu Gothic" size="11" style="0"/>
@@ -654,76 +427,6 @@
               <Font name="Yu Gothic" size="12" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Agregar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="JB_CURP">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="12" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Generar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="JB_Banco">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="12" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Agregar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="JL_Ferreteria">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="cc" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="18" style="0"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Ferreteria"/>
-            <Property name="opaque" type="boolean" value="true"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JTextField" name="JTF_Banco">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="11" style="0"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="JB_Ferreteria">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="12" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Agregar"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="JL_NSS">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="cc" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="18" style="0"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="No.SeguroSocial"/>
-            <Property name="opaque" type="boolean" value="true"/>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JTextField" name="JTF_NSS">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Yu Gothic" size="11" style="0"/>
-            </Property>
           </Properties>
         </Component>
       </SubComponents>

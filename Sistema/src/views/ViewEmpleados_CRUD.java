@@ -28,7 +28,7 @@ public class ViewEmpleados_CRUD extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        JT_Clientes = new javax.swing.JTable();
+        JT_Empleados = new javax.swing.JTable();
         JL_Empleados = new javax.swing.JLabel();
         JB_Buscar = new javax.swing.JButton();
         JTF_Busqueda = new javax.swing.JTextField();
@@ -64,7 +64,7 @@ public class ViewEmpleados_CRUD extends javax.swing.JPanel {
         JTF_Banco = new javax.swing.JTextField();
         JB_Ferreteria = new javax.swing.JButton();
         JL_NSS = new javax.swing.JLabel();
-        JTF_Telefono1 = new javax.swing.JTextField();
+        JTF_NSS = new javax.swing.JTextField();
         JP_Controles = new javax.swing.JPanel();
         JB_Nuevo = new javax.swing.JButton();
         JB_Agregar = new javax.swing.JButton();
@@ -75,9 +75,9 @@ public class ViewEmpleados_CRUD extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JT_Clientes.setBackground(new java.awt.Color(255, 204, 51));
-        JT_Clientes.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-        JT_Clientes.setModel(new javax.swing.table.DefaultTableModel(
+        JT_Empleados.setBackground(new java.awt.Color(255, 204, 51));
+        JT_Empleados.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JT_Empleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null, null, null, null},
@@ -88,7 +88,7 @@ public class ViewEmpleados_CRUD extends javax.swing.JPanel {
                 "ID", "Nombre", "Apellido Paterno", "Apellido Materno", "Telefono", "RFC", "CURP", "Dirección", "Banco", "NSS", "Ferreteria"
             }
         ));
-        jScrollPane1.setViewportView(JT_Clientes);
+        jScrollPane1.setViewportView(JT_Empleados);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 943, 90));
 
@@ -234,10 +234,10 @@ public class ViewEmpleados_CRUD extends javax.swing.JPanel {
         JL_NSS.setBackground(new java.awt.Color(255, 204, 102));
         JL_NSS.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_NSS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_NSS.setText("Telefono");
+        JL_NSS.setText("No.SeguroSocial");
         JL_NSS.setOpaque(true);
 
-        JTF_Telefono1.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JTF_NSS.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
 
         javax.swing.GroupLayout JP_DatosLayout = new javax.swing.GroupLayout(JP_Datos);
         JP_Datos.setLayout(JP_DatosLayout);
@@ -284,7 +284,7 @@ public class ViewEmpleados_CRUD extends javax.swing.JPanel {
                             .addGroup(JP_DatosLayout.createSequentialGroup()
                                 .addComponent(JL_NSS, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(JTF_Telefono1)
+                                .addComponent(JTF_NSS)
                                 .addGap(1, 1, 1))
                             .addGroup(JP_DatosLayout.createSequentialGroup()
                                 .addComponent(JL_Ferreteria, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -349,7 +349,7 @@ public class ViewEmpleados_CRUD extends javax.swing.JPanel {
                     .addComponent(JL_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTF_Telefono1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTF_NSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_NSS, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -462,12 +462,12 @@ public class ViewEmpleados_CRUD extends javax.swing.JPanel {
     private javax.swing.JTextField JTF_Direccion;
     private javax.swing.JTextField JTF_Email;
     private javax.swing.JTextField JTF_ID;
+    private javax.swing.JTextField JTF_NSS;
     private javax.swing.JTextField JTF_Nombre;
     private javax.swing.JTextField JTF_Payback;
     private javax.swing.JTextField JTF_RFC;
     private javax.swing.JTextField JTF_Telefono;
-    private javax.swing.JTextField JTF_Telefono1;
-    public javax.swing.JTable JT_Clientes;
+    public javax.swing.JTable JT_Empleados;
     public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

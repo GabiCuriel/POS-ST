@@ -28,7 +28,7 @@ public class ViewDirecciones_CRUD extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        JT_Clientes = new javax.swing.JTable();
+        JT_Direcciones = new javax.swing.JTable();
         JL_Direcciones = new javax.swing.JLabel();
         JTF_Busqueda = new javax.swing.JTextField();
         JB_Buscar = new javax.swing.JButton();
@@ -64,20 +64,20 @@ public class ViewDirecciones_CRUD extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JT_Clientes.setBackground(new java.awt.Color(255, 204, 51));
-        JT_Clientes.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-        JT_Clientes.setModel(new javax.swing.table.DefaultTableModel(
+        JT_Direcciones.setBackground(new java.awt.Color(255, 204, 51));
+        JT_Direcciones.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JT_Direcciones.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Apellido Paterno", "Apellido Materno", "Telefono", "RFC", "Dirección", "PayBack", "E-Mail"
+                "ID", "Calle", "Colonia", "Número Interior", "Número Exterior", "CP", "Ciudad", "Estado"
             }
         ));
-        jScrollPane1.setViewportView(JT_Clientes);
+        jScrollPane1.setViewportView(JT_Direcciones);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 943, 130));
 
@@ -367,7 +367,7 @@ public class ViewDirecciones_CRUD extends javax.swing.JPanel {
     private javax.swing.JTextField JTF_ID;
     private javax.swing.JTextField JTF_No_Exterior;
     private javax.swing.JTextField JTF_No_Interior;
-    public javax.swing.JTable JT_Clientes;
+    public javax.swing.JTable JT_Direcciones;
     public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
