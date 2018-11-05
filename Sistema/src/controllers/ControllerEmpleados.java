@@ -5,7 +5,7 @@
  */
 package controllers;
 
-import models.ModelEmpleados;
+import models.ModelEmpleados_CRUD;
 import views.ViewEmpleados;
 
 /**
@@ -13,9 +13,9 @@ import views.ViewEmpleados;
  * @author TeddyBear
  */
 public class ControllerEmpleados {
-    public ModelEmpleados modelEmpleados;
+    public ModelEmpleados_CRUD modelEmpleados;
     public ViewEmpleados viewEmpleados;
-    public ControllerEmpleados(ModelEmpleados modelEmpleados, ViewEmpleados viewEmpleados) {
+    public ControllerEmpleados(ModelEmpleados_CRUD modelEmpleados, ViewEmpleados viewEmpleados) {
         
     }
     

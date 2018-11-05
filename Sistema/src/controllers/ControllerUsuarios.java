@@ -5,7 +5,7 @@
  */
 package controllers;
 
-import models.ModelUsuarios;
+import models.ModelUsuarios_CRUD;
 import views.ViewUsuarios;
 
 /**
@@ -13,9 +13,9 @@ import views.ViewUsuarios;
  * @author TeddyBear
  */
 public class ControllerUsuarios {
-    public ModelUsuarios modelUsuarios;
+    public ModelUsuarios_CRUD modelUsuarios;
     public ViewUsuarios viewUsuarios;
-    public ControllerUsuarios(ModelUsuarios modelUsuarios, ViewUsuarios viewUsuarios) {
+    public ControllerUsuarios(ModelUsuarios_CRUD modelUsuarios, ViewUsuarios viewUsuarios) {
         
     }
     
