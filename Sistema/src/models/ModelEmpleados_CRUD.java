@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 package models;
-<<<<<<< HEAD
+
 
 /**
  *
  * @author TeddyBear
  */
-public class ModelEmpleados_CRUD {
+
     
-=======
+
 /*@set No regresa nada y permite modificar*/
 /*@get Regresa y permite conocer el valor que tiene la variable*/
 import java.sql.Connection;
@@ -188,5 +188,5 @@ public class ModelEmpleados_CRUD {
         st.executeUpdate(sql); 
         this.conectarDB();
     }
->>>>>>> 40207481260a0c4b871cd4255c0081a19afe5059
+
 }
