@@ -26,7 +26,7 @@ public class Main {
         //ViewDirecciones viewDirecciones = new ViewDirecciones();
         //ControllerDirecciones controllerDirecciones = new ControllerDirecciones(modelDirecciones, viewDirecciones);
         
-        ModelEmpleados modelEmpleados = new ModelEmpleados();
+        ModelEmpleados_CRUD modelEmpleados = new ModelEmpleados_CRUD();
         ViewEmpleados viewEmpleados = new ViewEmpleados();
         ControllerEmpleados controllerEmpleados = new ControllerEmpleados(modelEmpleados, viewEmpleados);
         
@@ -38,7 +38,7 @@ public class Main {
         ViewProveedores viewProveedores = new ViewProveedores();
         ControllerProveedores controllerProveedores = new ControllerProveedores(modelProveedores, viewProveedores);
         
-        ModelUsuarios modelUsuarios = new ModelUsuarios();
+        ModelUsuarios_CRUD modelUsuarios = new ModelUsuarios_CRUD();
         ViewUsuarios viewUsuarios = new ViewUsuarios();
         ControllerUsuarios controllerUsuarios = new ControllerUsuarios(modelUsuarios, viewUsuarios);
         
