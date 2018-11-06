@@ -2,32 +2,8 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/ModelClientes.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/controllers/ControllerPrincipal.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewClientes.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/controllers/ControllerClientes.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewClientes_CRUD.java</file>
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewDirecciones.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewClientes.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewUsuarios.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewEmpleados.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewProductos.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/bd/bd_punto_venta.sql</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/main/Main.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewProveedores.java</file>
-=======
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewClientes.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewProductos.java</file>
->>>>>>> 8526c5640dbc66bf7bcb21b35ea58d25f0bf8899
->>>>>>> 40207481260a0c4b871cd4255c0081a19afe5059
+            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/main/Main.java</file>
         </group>
->>>>>>> 3606fefadbeac96443d325274ebaffd2fd6c4d00
     </open-files>
 </project-private>
