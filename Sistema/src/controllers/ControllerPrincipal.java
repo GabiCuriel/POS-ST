@@ -56,6 +56,7 @@ public class ControllerPrincipal {
         viewPrincipal.JMI_Productos.addActionListener(actionListener);
         viewPrincipal.JMI_Proveedores.addActionListener(actionListener);
         viewPrincipal.JMI_Empleados.addActionListener(actionListener);
+        viewPrincipal.JMI_Usuarios.addActionListener(actionListener);
         
     }
     
@@ -106,7 +107,7 @@ public class ControllerPrincipal {
     }
     
     private void jmi_usuarios_actionPerformed(){
-        viewPrincipal.setContentPane(controllerClientes.viewClientes);
+        viewPrincipal.setContentPane(controllerUsuarios.viewUsuarios);
         viewPrincipal.revalidate();
         viewPrincipal.repaint();
     }

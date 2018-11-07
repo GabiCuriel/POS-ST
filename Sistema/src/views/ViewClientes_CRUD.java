@@ -362,14 +362,14 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JB_Agregar;
+    public javax.swing.JButton JB_Agregar;
     private javax.swing.JButton JB_Buscar;
-    private javax.swing.JButton JB_Cancelar;
-    private javax.swing.JButton JB_Direccion;
-    private javax.swing.JButton JB_Eliminar;
-    private javax.swing.JButton JB_Modificar;
-    private javax.swing.JButton JB_Nuevo;
-    private javax.swing.JButton JB_RFC;
+    public javax.swing.JButton JB_Cancelar;
+    public javax.swing.JButton JB_Direccion;
+    public javax.swing.JButton JB_Eliminar;
+    public javax.swing.JButton JB_Modificar;
+    public javax.swing.JButton JB_Nuevo;
+    public javax.swing.JButton JB_RFC;
     public javax.swing.JLabel JL_AM;
     public javax.swing.JLabel JL_AP;
     private javax.swing.JLabel JL_Background;
@@ -388,16 +388,16 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
     public javax.swing.JLabel JL_Usuario;
     private javax.swing.JPanel JP_Controles;
     private javax.swing.JPanel JP_Datos;
-    private javax.swing.JTextField JTF_AM;
-    private javax.swing.JTextField JTF_AP;
+    public javax.swing.JTextField JTF_AM;
+    public javax.swing.JTextField JTF_AP;
     private javax.swing.JTextField JTF_Busqueda;
-    private javax.swing.JTextField JTF_Direccion;
-    private javax.swing.JTextField JTF_Email;
-    private javax.swing.JTextField JTF_ID;
-    private javax.swing.JTextField JTF_Nombre;
-    private javax.swing.JTextField JTF_Payback;
-    private javax.swing.JTextField JTF_RFC;
-    private javax.swing.JTextField JTF_Telefono;
+    public javax.swing.JTextField JTF_Direccion;
+    public javax.swing.JTextField JTF_Email;
+    public javax.swing.JTextField JTF_ID;
+    public javax.swing.JTextField JTF_Nombre;
+    public javax.swing.JTextField JTF_Payback;
+    public javax.swing.JTextField JTF_RFC;
+    public javax.swing.JTextField JTF_Telefono;
     public javax.swing.JTable JT_Clientes;
     public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

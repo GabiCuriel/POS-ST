@@ -6,6 +6,7 @@
 package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
 import views.*;
 import models.*;
 
@@ -19,26 +20,14 @@ public class ControllerClientes {
     ActionListener actionListner = new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent CL) {
-     //       if (CL.getSource() == viewClientes.JB_Eliminar) {
-       //         Delete_cliente();
-         //   } else if (CL.getSource() == viewClientes.JB_Modificar){
-           //     Modifica_cliente();
-      //      } else if (CL.getSource() == viewClientes.JB_Agregar){
-        //        Agregar_cliente();
-          //  }
+            if (CL.getSource() == viewClientes.JB_Buscar) {
+                Buscar_cliente();
+            }
         }
     };
     
-    public void Delete_cliente(){
-        System.out.println("Delete - clientes");
-    }
-    
-    public void Modifica_cliente(){
-        System.out.println("Modifica - clientes");
-    }
-    
-    public void Agregar_cliente(){
-        System.out.println("Agregar - clientes");
+    public void Buscar_cliente(){
+        System.out.println("buscar - clientes");
         
     }
     
@@ -50,14 +39,25 @@ public class ControllerClientes {
     }
 
     private void setActionListener() {
-  //      viewClientes.JB_Agregar.addActionListener(actionListner);
-    //    viewClientes.JB_Eliminar.addActionListener(actionListner);
-      //  viewClientes.JB_Modificar.addActionListener(actionListner);
-       // viewClientes.jButton4.addActionListener(actionListner);
-                
+        viewClientes.JB_Buscar.addActionListener(actionListner);
     }
 
     private void initBD() {
-        
+        DefaultTableModel modelo = new DefaultTableModel();
+        viewClientes.JT_Clientes.setModel(modelo);
+        modelo.addColumn("ID");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellido P");
+        modelo.addColumn("Apellido M");
+        modelo.addColumn("telefono");
+        modelo.addColumn("RFC");
+        modelo.addColumn("Payback");
+        modelo.addColumn("Email");
+        modelo.addColumn("Dirección");
+        modelClientes.obtenerClientes();
+        modelClientes.obtenerDireccion();
+        modelo.addRow(modelClientes.getPrueba());
+        modelo.setValueAt(modelClientes.getDireccion_CL(), 0, 8);   
+        modelClientes.concatenarDireccionSQL();
     }
 }

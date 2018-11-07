@@ -22,27 +22,14 @@ public class Main {
         ViewClientes viewClientes = new ViewClientes();
         ControllerClientes controllerClientes = new ControllerClientes(modelClientes, viewClientes);
         
-        ModelDirecciones modelDirecciones = new ModelDirecciones();
-        ViewDirecciones viewDirecciones = new ViewDirecciones();
-        ControllerDirecciones controllerDirecciones = new ControllerDirecciones(modelDirecciones, viewDirecciones);
+        ModelClientes_CRUD modelClientes_CRUD = new ModelClientes_CRUD();
+        ViewClientes_CRUD viewClientes_CRUD = new ViewClientes_CRUD();
+        ControllerClientes_CRUD controllerClientes_CRUD = new ControllerClientes_CRUD(modelClientes_CRUD, viewClientes_CRUD);
         
         ModelEmpleados modelEmpleados = new ModelEmpleados();
-        ViewEmpleados viewEmpleados = new ViewEmpleados();
-        ControllerEmpleados controllerEmpleados = new ControllerEmpleados(modelEmpleados, viewEmpleados);
         
-        ModelProductos modelProductos = new ModelProductos();
-        ViewProductos viewProductos = new ViewProductos();
-        ControllerProductos controllerProductos = new ControllerProductos(modelProductos, viewProductos);
         
-        ModelProveedores modelProveedores = new ModelProveedores();
-        ViewProveedores viewProveedores = new ViewProveedores();
-        ControllerProveedores controllerProveedores = new ControllerProveedores(modelProveedores, viewProveedores);
-        
-        ModelUsuarios modelUsuarios = new ModelUsuarios();
-        ViewUsuarios viewUsuarios = new ViewUsuarios();
-        ControllerUsuarios controllerUsuarios = new ControllerUsuarios(modelUsuarios, viewUsuarios);
-        
-        Object[] controllers = new Object[5];
+        Object[] controllers = new Object[10];
         controllers[0] = controllerClientes;
         controllers[1] = controllerEmpleados;
         controllers[2] = controllerProductos;
