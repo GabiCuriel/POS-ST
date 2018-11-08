@@ -4,12 +4,7 @@
  * and open the template in the editor.
  */
 package models;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.util.Arrays;
+import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -33,46 +28,12 @@ public class ModelClientes {
     private String AM_CL;
     private String Telefono_CL;
     private String RFC_CL;
-    private String ID_D;
-    private int cantColu;
-    private Object[] prueba;
-    private String direccion;
-
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-    
-    public int getCantColu() {
-        return cantColu;
-    }
-
-    public void setCantColu(int cantColu) {
-        this.cantColu = cantColu;
-    }
-    
-
-    public Object[] getPrueba() {
-        return prueba;
-    }
-
-    public void setPrueba(Object[] prueba) {
-        this.prueba = prueba;
-    }
-
-    public String getID_D() {
-        return ID_D;
-    }
-
-    public void setID_D(String ID_D) {
-        this.ID_D = ID_D;
-    }
+    private String ID_D;    
     private String Direccion_CL;
     private String Payback_CL;
     private String Email_CL;
+    private int cantColu;
+    private Object[] tabla = new Object[cantColu];
 
     public String getID_CL() {
         return ID_CL;
@@ -122,6 +83,14 @@ public class ModelClientes {
         this.RFC_CL = RFC_CL;
     }
 
+    public String getID_D() {
+        return ID_D;
+    }
+
+    public void setID_D(String ID_D) {
+        this.ID_D = ID_D;
+    }
+
     public String getDireccion_CL() {
         return Direccion_CL;
     }
@@ -144,12 +113,61 @@ public class ModelClientes {
 
     public void setEmail_CL(String Email_CL) {
         this.Email_CL = Email_CL;
-    }    
-    
-    public void setValues(){
-        
+    }
+
+    public int getCantColu() {
+        return cantColu;
+    }
+
+    public void setCantColu(int cantColu) {
+        this.cantColu = cantColu;
+    }
+
+    public Object[] getTabla() {
+        return tabla;
+    }
+
+    public void setTabla(Object[] tabla) {
+        this.tabla = tabla;
+    }
+
+    public void llenarTabla(){
+        modelo.addColumn("ID");
+        modelo.addColumn("Nombre"); 
+        modelo.addColumn("Apellido P");
+        modelo.addColumn("Apellido M");
+        modelo.addColumn("telefono");
+        modelo.addColumn("RFC");
+        modelo.addColumn("Payback");
+        modelo.addColumn("Email");
+        modelo.addColumn("Dirección");
+        try{
+            System.out.println("Modelo - verClientes - llenarTabla");
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            Conexion conn = new Conexion();
+            Connection con = conn.getConexion();
+            String sql = "SELECT * FROM clientes;";
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            
+            ResultSetMetaData rsMd = rs.getMetaData();
+            this.setCantColu(rsMd.getColumnCount());
+            while (rs.next()){
+                Object[] filas = new Object[this.getCantColu()];
+                for (int i = 0; i < this.getCantColu(); i++){
+                    filas[i] = rs.getObject(i +  1);
+                    System.out.println(filas[i]);
+                }
+                this.modelo.addRow(filas);
+                this.setTabla(filas);
+            }
+        } catch (SQLException err){
+            JOptionPane.showMessageDialog(null,"Error ModelClientes 001: "+ err.getMessage());
+        }
     }
     
+    /*
     public void obtenerClientes(){
         try{
             PreparedStatement pps = null;
@@ -239,8 +257,5 @@ public class ModelClientes {
         System.out.println(this.getDireccion());
         
     }
-    
-    public void llenarTabla(){
-        
-    }
+    */
 }
