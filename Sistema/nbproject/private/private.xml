@@ -3,23 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewDirecciones.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/models/ModelEmpleados_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/models/ModelProveedores_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewProductos_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewDirecciones_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/models/ModelProductos_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewClientes_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewCompras.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewClientes.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewUsuarios.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewEmpleados.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewSucursales_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewEmpleados_CRUD.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewProductos.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/bd/bd_punto_venta.sql</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/main/Main.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewProveedores.java</file>
-=======
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewClientes.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewProductos.java</file>
->>>>>>> 8526c5640dbc66bf7bcb21b35ea58d25f0bf8899
-=======
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewPrincipal.java</file>
->>>>>>> 9615ba9d54ab1065196f6b83092f6abaf2eb681f
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/models/ModelProductos.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/controllers/ControllerSucursales_CRUD.java</file>
         </group>
     </open-files>
 </project-private>
