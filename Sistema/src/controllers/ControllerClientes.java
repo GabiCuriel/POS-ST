@@ -28,6 +28,18 @@ public class ControllerClientes {
     
     public void Buscar_cliente(){
         System.out.println("buscar - clientes");
+        DefaultTableModel modelo = new DefaultTableModel();
+        viewClientes.JT_Clientes.setModel(modelo);
+        modelo.addColumn("ID");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Apellido P");
+        modelo.addColumn("Apellido M");
+        modelo.addColumn("telefono");
+        modelo.addColumn("RFC");
+        modelo.addColumn("Payback");
+        modelo.addColumn("Email");
+        modelo.addColumn("Dirección");
+        modelo.addRow(modelClientes.getTabla());
         
     }
     
@@ -43,21 +55,7 @@ public class ControllerClientes {
     }
 
     private void initBD() {
-        DefaultTableModel modelo = new DefaultTableModel();
-        viewClientes.JT_Clientes.setModel(modelo);
-        modelo.addColumn("ID");
-        modelo.addColumn("Nombre");
-        modelo.addColumn("Apellido P");
-        modelo.addColumn("Apellido M");
-        modelo.addColumn("telefono");
-        modelo.addColumn("RFC");
-        modelo.addColumn("Payback");
-        modelo.addColumn("Email");
-        modelo.addColumn("Dirección");
-        modelClientes.obtenerClientes();
-        modelClientes.obtenerDireccion();
-        modelo.addRow(modelClientes.getPrueba());
-        modelo.setValueAt(modelClientes.getDireccion_CL(), 0, 8);   
-        modelClientes.concatenarDireccionSQL();
+        modelClientes.llenarTabla();
+        viewClientes.JT_Clientes.setModel(modelClientes.getModelo());
     }
 }
