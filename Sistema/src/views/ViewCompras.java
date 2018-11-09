@@ -27,16 +27,235 @@ public class ViewCompras extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        JT_Compras = new javax.swing.JTable();
+        JP_Total = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        JTF_Total = new javax.swing.JTextField();
+        JL_Total_sin_IVA = new javax.swing.JLabel();
+        JL_IVA = new javax.swing.JLabel();
+        JL_Total = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        JL_Nombre_Proveedor = new javax.swing.JLabel();
+        JTF_Nombre_Proveedor = new javax.swing.JTextField();
+        JTF_ID_Proveedor = new javax.swing.JTextField();
+        JL_ID_Proveedor = new javax.swing.JLabel();
+        JL_Compras = new javax.swing.JLabel();
+        JB_Quitar = new javax.swing.JButton();
+        JB_Realizar = new javax.swing.JButton();
+        JB_Agregar = new javax.swing.JButton();
+        JB_Cancelar = new javax.swing.JButton();
+        JL_TipoUsuario = new javax.swing.JLabel();
+        JL_Usuario = new javax.swing.JLabel();
+        JL_NoFerreteria1 = new javax.swing.JLabel();
+        JL_NoFerreteria = new javax.swing.JLabel();
+        JL_Ferreteria3 = new javax.swing.JLabel();
         JL_Background = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        JT_Compras.setBackground(new java.awt.Color(255, 204, 0));
+        JT_Compras.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "ID", "Producto", "Marca", "Precio"
+            }
+        ));
+        jScrollPane1.setViewportView(JT_Compras);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, 320, 330));
+
+        JP_Total.setBackground(new java.awt.Color(255, 153, 0));
+        JP_Total.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jTextField1.setBackground(new java.awt.Color(255, 153, 0));
+        jTextField1.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        jTextField1.setSelectionColor(new java.awt.Color(255, 153, 0));
+
+        jTextField2.setBackground(new java.awt.Color(255, 153, 0));
+        jTextField2.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        jTextField2.setSelectionColor(new java.awt.Color(255, 153, 0));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+
+        JTF_Total.setBackground(new java.awt.Color(255, 153, 0));
+        JTF_Total.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JTF_Total.setSelectionColor(new java.awt.Color(255, 153, 0));
+
+        JL_Total_sin_IVA.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Total_sin_IVA.setText("Total sin IVA");
+
+        JL_IVA.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_IVA.setText("IVA");
+
+        JL_Total.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Total.setText("Total");
+
+        javax.swing.GroupLayout JP_TotalLayout = new javax.swing.GroupLayout(JP_Total);
+        JP_Total.setLayout(JP_TotalLayout);
+        JP_TotalLayout.setHorizontalGroup(
+            JP_TotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_TotalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(JL_Total_sin_IVA)
+                .addGap(34, 34, 34)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(JL_IVA)
+                .addGap(40, 40, 40)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34))
+            .addGroup(JP_TotalLayout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(JL_Total, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(JTF_Total, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        JP_TotalLayout.setVerticalGroup(
+            JP_TotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JP_TotalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JP_TotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_Total_sin_IVA)
+                    .addComponent(JL_IVA))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(JP_TotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JTF_Total, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_Total))
+                .addContainerGap())
+        );
+
+        add(JP_Total, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 490, 120));
+
+        jPanel1.setBackground(new java.awt.Color(255, 204, 51));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 486, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 296, Short.MAX_VALUE)
+        );
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 490, 300));
+
+        JL_Nombre_Proveedor.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JL_Nombre_Proveedor.setText("Nombre");
+        add(JL_Nombre_Proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, -1, -1));
+
+        JTF_Nombre_Proveedor.setBackground(new java.awt.Color(255, 204, 0));
+        JTF_Nombre_Proveedor.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        add(JTF_Nombre_Proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 130, -1));
+
+        JTF_ID_Proveedor.setBackground(new java.awt.Color(255, 204, 0));
+        JTF_ID_Proveedor.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        add(JTF_ID_Proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, 40, -1));
+
+        JL_ID_Proveedor.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JL_ID_Proveedor.setText("ID Proveedor");
+        add(JL_ID_Proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
+
+        JL_Compras.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        JL_Compras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_Compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sucursales.png"))); // NOI18N
+        add(JL_Compras, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
+
+        JB_Quitar.setBackground(new java.awt.Color(255, 204, 0));
+        JB_Quitar.setText("QUITAR");
+        add(JB_Quitar, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 410, 80, 30));
+
+        JB_Realizar.setBackground(new java.awt.Color(255, 204, 0));
+        JB_Realizar.setText("REALIZAR");
+        add(JB_Realizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 460, 220, 30));
+
+        JB_Agregar.setBackground(new java.awt.Color(255, 204, 0));
+        JB_Agregar.setText("AGREGAR");
+        JB_Agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_AgregarActionPerformed(evt);
+            }
+        });
+        add(JB_Agregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 410, 130, 30));
+
+        JB_Cancelar.setBackground(new java.awt.Color(255, 204, 0));
+        JB_Cancelar.setText("CANCELAR");
+        add(JB_Cancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 410, 90, 30));
+
+        JL_TipoUsuario.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_TipoUsuario.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_TipoUsuario.setText("Encargado de Ventas");
+        add(JL_TipoUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 540, 240, 20));
+
+        JL_Usuario.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Usuario.setText("Usuario 12");
+        add(JL_Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 510, 170, 20));
+
+        JL_NoFerreteria1.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_NoFerreteria1.setText("Ferreteria :");
+        add(JL_NoFerreteria1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 100, 20));
+
+        JL_NoFerreteria.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_NoFerreteria.setText("1");
+        add(JL_NoFerreteria, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 50, 20));
+
+        JL_Ferreteria3.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Ferreteria3.setText("Ferreterias \"Acme\"");
+        add(JL_Ferreteria3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 170, 20));
 
         JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
         add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 580));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void JB_AgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_AgregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JB_AgregarActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JB_Agregar;
+    private javax.swing.JButton JB_Cancelar;
+    private javax.swing.JButton JB_Quitar;
+    private javax.swing.JButton JB_Realizar;
     private javax.swing.JLabel JL_Background;
+    public javax.swing.JLabel JL_Compras;
+    public javax.swing.JLabel JL_Ferreteria3;
+    private javax.swing.JLabel JL_ID_Proveedor;
+    private javax.swing.JLabel JL_IVA;
+    public javax.swing.JLabel JL_NoFerreteria;
+    public javax.swing.JLabel JL_NoFerreteria1;
+    private javax.swing.JLabel JL_Nombre_Proveedor;
+    public javax.swing.JLabel JL_TipoUsuario;
+    private javax.swing.JLabel JL_Total;
+    private javax.swing.JLabel JL_Total_sin_IVA;
+    public javax.swing.JLabel JL_Usuario;
+    private javax.swing.JPanel JP_Total;
+    private javax.swing.JTextField JTF_ID_Proveedor;
+    private javax.swing.JTextField JTF_Nombre_Proveedor;
+    private javax.swing.JTextField JTF_Total;
+    private javax.swing.JTable JT_Compras;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

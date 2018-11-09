@@ -118,7 +118,7 @@ public class ViewSucursales_CRUD extends javax.swing.JPanel {
         JL_Direccion.setBackground(new java.awt.Color(255, 204, 102));
         JL_Direccion.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_Direccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Direccion.setText("Nombre");
+        JL_Direccion.setText("Dirección");
         JL_Direccion.setOpaque(true);
 
         JTF_ID.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
