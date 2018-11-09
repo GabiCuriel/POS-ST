@@ -173,7 +173,7 @@ public class ViewCompras extends javax.swing.JPanel {
 
         JL_Compras.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         JL_Compras.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sucursales.png"))); // NOI18N
+        JL_Compras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/compras.png"))); // NOI18N
         add(JL_Compras, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
 
         JB_Quitar.setBackground(new java.awt.Color(255, 204, 0));
