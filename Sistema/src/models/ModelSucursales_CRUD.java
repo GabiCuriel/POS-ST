@@ -115,24 +115,15 @@ public class ModelSucursales_CRUD {
             st = conexion.createStatement(); //para ejecutar sentencias sql desde java
             rs = st.executeQuery("SELECT * FROM Sucursales;"); //almacena temporalmente los datos de la consulta 
             rs.next(); //avanza de fila en fila 
-            ID_S = rs.getString("ID_S"); //almacena los nombres de los usuario en ID_S
-            Colonia_S = rs.getString("Colonia_S");
-            Calle_S = rs.getString("Calle_S"); //almacena el nombre de los usuarios en Calle_S 
-            NumE_S = rs.getString("NumE_S");
-            NumI_S = rs.getString("NumI_S");
-            Ciudad_S = rs.getString("Ciudad_S");
-            CodigoP_S = rs.getString("CodigoP_S");
-            ID_F = rs.getString("ID_F");
-            ID_E = rs.getString("ID_E");
-            this.setID_S(ID_S);
-            this.setColonia_S(Colonia_S);
-            this.setCalle_S(Calle_S);
-            this.setNumE_S(NumE_S);
-            this.setNumI_S(NumI_S);
-            this.setCiudad_S(Ciudad_S);
-            this.setCiudad_S(CodigoP_S);
-            this.setID_F(ID_F);
-            this.setID_E(ID_E);
+            this.setID_S(rs.getString("ID_S")); //Asigna y modifica un valor a la variable ID_S
+            this.setColonia_S(rs.getString("Colonia_S")); //Asigna y modifica un valor a la variable Colonia_S
+            this.setCalle_S(rs.getString("Calle_S")); //Asigna y modifica un valor a la variable Calle_S
+            this.setNumE_S(rs.getString("NumE_S")); //Asigna y modifica un valor a la variable NumE_S
+            this.setNumI_S(rs.getString("NumI_S")); //Asigna y modifica un valor a la variable NumI_S
+            this.setCiudad_S(rs.getString("Ciudad_S")); //Asigna y modifica un valor a la variable Ciudad_S
+            this.setCodigoP_S(rs.getString("CodigoP_S")); //Asigna y modifica un valor a la variable CodigoP_S
+            this.setID_F(rs.getString("ID_F")); //Asigna y modifica un valor a la variable ID_F
+            this.setID_E(rs.getString("ID_E")); //Asigna y modifica un valor a la variable ID_E 
             
         } catch (SQLException err) {
             JOptionPane.showMessageDialog(null, "Error Model 001: " + err.getMessage()); //Regresa si encuentra error 
@@ -143,23 +134,20 @@ public class ModelSucursales_CRUD {
     public void insertarRegistro(String ID_S, String Colonia_S, String Calle_S, String NumE_S, String NumI_S, String Ciudad_S, String CodigoP_S,String ID_F, String ID_E) throws SQLException {
         System.out.print("Programa accion insertarRegistro"); //Mensaje que asegure que funciona el booton insertarRegistro
         String sql = "INSERT INTO Sucursales(ID_S,Colonia_S,Calle_S,NumE_S,NumI_S,Ciudad_S,ID_F,ID_E) VALUES" + "('" + ID_S + "','" + Colonia_S + "'','" + Calle_S + "'','" + NumE_S + "'','" + NumI_S + "','" + Ciudad_S + "','" + CodigoP_S + "','" + ID_F + "','" + ID_E + "');" ;
-        System.out.print(sql);
-        st.executeUpdate(sql);       
-        this.conectarDB();
+        System.out.print(sql);//Para verificar el funcionamiento correcto de la concatenacion
+        st.executeUpdate(sql); //Ejecutar la consulta sql       
     }
     public void modificarRegistro(String ID_S, String Colonia_S, String Calle_S, String NumE_S, String NumI_S, String Ciudad_S, String CodigoP_S,String ID_F, String ID_E) throws SQLException {
         System.out.print("Programa accion modificarRegistro"); //Mensaje que asegure que funciona el bootonpublic modificarRegistro
         String actualID_S = this.getID_S();
         String sql = "UPDATE Sucursales SET ID_S='" + ID_S + "',Colonia_S='" + Colonia_S + "', Calle_S='" + Calle_S + "',NumE_S='" + NumE_S +  "',NumI_S='" + NumI_S + "',Ciudad_S='" + Ciudad_S + "',CodigoP_S='" + CodigoP_S + "',ID_F='" + ID_F + "',ID_E='" + ID_E + "';";
-        System.out.print(sql);
-        st.executeUpdate(sql);
-        this.conectarDB();
+        System.out.print(sql);//Para verificar el funcionamiento correcto de la concatenacion
+        st.executeUpdate(sql); //Ejecutar la consulta sql 
     }
 
     public void eliminarRegistro(String ID_S) throws SQLException {
         System.out.print("Programa accion eliminarRegistro"); //Mensaje que asegure que funciona el booton eliminarRegistro
         String sql = "DELETE FROM Sucursales WHERE ID_S='" + ID_S + "';";
-        System.out.print(sql);
-        this.conectarDB();
+        System.out.print(sql); //Para verificar el funcionamiento correcto de la concatenacion
     }
 }
