@@ -7,14 +7,14 @@ package views;
 
 /**
  *
- * @author TeddyBear
+ * @author Juan Pablo
  */
-public class ViewClientes_CRUD extends javax.swing.JPanel {
+public class ViewEmpleados_CRUD extends javax.swing.JPanel {
 
     /**
-     * Creates new form Clientes
+     * Creates new form ViewEmpleados_CRUD
      */
-    public ViewClientes_CRUD() {
+    public ViewEmpleados_CRUD() {
         initComponents();
     }
 
@@ -28,7 +28,7 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        JT_Clientes = new javax.swing.JTable();
+        JT_Empleados = new javax.swing.JTable();
         JL_Empleados = new javax.swing.JLabel();
         JB_Buscar = new javax.swing.JButton();
         JTF_Busqueda = new javax.swing.JTextField();
@@ -45,7 +45,7 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
         JL_Telefono = new javax.swing.JLabel();
         JL_RFC = new javax.swing.JLabel();
         JL_Payback = new javax.swing.JLabel();
-        JL_Email = new javax.swing.JLabel();
+        JL_Banco = new javax.swing.JLabel();
         JL_Direccion = new javax.swing.JLabel();
         JB_RFC = new javax.swing.JButton();
         JTF_ID = new javax.swing.JTextField();
@@ -58,6 +58,13 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
         JTF_Email = new javax.swing.JTextField();
         JTF_Direccion = new javax.swing.JTextField();
         JB_Direccion = new javax.swing.JButton();
+        JB_CURP = new javax.swing.JButton();
+        JB_Banco = new javax.swing.JButton();
+        JL_Ferreteria = new javax.swing.JLabel();
+        JTF_Banco = new javax.swing.JTextField();
+        JB_Ferreteria = new javax.swing.JButton();
+        JL_NSS = new javax.swing.JLabel();
+        JTF_NSS = new javax.swing.JTextField();
         JP_Controles = new javax.swing.JPanel();
         JB_Nuevo = new javax.swing.JButton();
         JB_Agregar = new javax.swing.JButton();
@@ -68,27 +75,27 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JT_Clientes.setBackground(new java.awt.Color(255, 204, 51));
-        JT_Clientes.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-        JT_Clientes.setModel(new javax.swing.table.DefaultTableModel(
+        JT_Empleados.setBackground(new java.awt.Color(255, 204, 51));
+        JT_Empleados.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JT_Empleados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Apellido Paterno", "Apellido Materno", "Telefono", "RFC", "Dirección", "PayBack", "E-Mail"
+                "ID", "Nombre", "Apellido Paterno", "Apellido Materno", "Telefono", "RFC", "CURP", "Dirección", "Banco", "NSS", "Ferreteria"
             }
         ));
-        jScrollPane1.setViewportView(JT_Clientes);
+        jScrollPane1.setViewportView(JT_Empleados);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 943, 130));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 943, 90));
 
         JL_Empleados.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         JL_Empleados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Empleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/clientes.png"))); // NOI18N
-        add(JL_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
+        JL_Empleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/empleados.png"))); // NOI18N
+        add(JL_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 210, 50));
 
         JB_Buscar.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
         JB_Buscar.setText("Buscar");
@@ -163,14 +170,14 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
         JL_Payback.setBackground(new java.awt.Color(255, 204, 102));
         JL_Payback.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_Payback.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Payback.setText("Puntos PayBack");
+        JL_Payback.setText("CURP");
         JL_Payback.setOpaque(true);
 
-        JL_Email.setBackground(new java.awt.Color(255, 204, 102));
-        JL_Email.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
-        JL_Email.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Email.setText("Email");
-        JL_Email.setOpaque(true);
+        JL_Banco.setBackground(new java.awt.Color(255, 204, 102));
+        JL_Banco.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Banco.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_Banco.setText("Banco");
+        JL_Banco.setOpaque(true);
 
         JL_Direccion.setBackground(new java.awt.Color(255, 204, 102));
         JL_Direccion.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
@@ -207,40 +214,84 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
         JB_Direccion.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
         JB_Direccion.setText("Agregar");
 
+        JB_CURP.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JB_CURP.setText("Generar");
+
+        JB_Banco.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JB_Banco.setText("Agregar");
+
+        JL_Ferreteria.setBackground(new java.awt.Color(255, 204, 102));
+        JL_Ferreteria.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Ferreteria.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_Ferreteria.setText("Ferreteria");
+        JL_Ferreteria.setOpaque(true);
+
+        JTF_Banco.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+
+        JB_Ferreteria.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JB_Ferreteria.setText("Agregar");
+
+        JL_NSS.setBackground(new java.awt.Color(255, 204, 102));
+        JL_NSS.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_NSS.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_NSS.setText("No.SeguroSocial");
+        JL_NSS.setOpaque(true);
+
+        JTF_NSS.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+
         javax.swing.GroupLayout JP_DatosLayout = new javax.swing.GroupLayout(JP_Datos);
         JP_Datos.setLayout(JP_DatosLayout);
         JP_DatosLayout.setHorizontalGroup(
             JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_DatosLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JL_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JL_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JL_AP, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JL_AM, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JL_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JL_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JL_Payback, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(JL_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(JL_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JTF_ID)
-                    .addComponent(JTF_Nombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
-                    .addComponent(JTF_AP, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
-                    .addComponent(JTF_AM, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
-                    .addComponent(JTF_Telefono, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
-                    .addComponent(JTF_Payback)
-                    .addComponent(JTF_Email)
+                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(JP_DatosLayout.createSequentialGroup()
-                        .addComponent(JTF_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(JB_RFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(JP_DatosLayout.createSequentialGroup()
-                        .addComponent(JTF_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(JB_Direccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(25, 25, 25)
+                        .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JL_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JL_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JL_AP, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JL_AM, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JL_Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JL_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JL_Payback, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(JL_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(JL_Banco, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(JTF_ID)
+                            .addComponent(JTF_Nombre, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(JTF_AP)
+                            .addComponent(JTF_AM)
+                            .addComponent(JTF_Telefono, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(JP_DatosLayout.createSequentialGroup()
+                                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(JTF_Email, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(JTF_Payback, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                                        .addComponent(JTF_RFC, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(JTF_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(JB_Direccion, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                                    .addComponent(JB_RFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(JB_CURP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(JB_Banco, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, JP_DatosLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JP_DatosLayout.createSequentialGroup()
+                                .addComponent(JL_NSS, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JTF_NSS)
+                                .addGap(1, 1, 1))
+                            .addGroup(JP_DatosLayout.createSequentialGroup()
+                                .addComponent(JL_Ferreteria, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JTF_Banco, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(JB_Ferreteria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         JP_DatosLayout.setVerticalGroup(
@@ -284,20 +335,31 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(JTF_Payback, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JL_Payback, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(JL_Payback, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JB_CURP, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(10, 10, 10)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JL_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTF_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JL_Banco, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JTF_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_Banco, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JTF_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JB_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JTF_NSS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_NSS, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JTF_Banco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_Ferreteria, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_Ferreteria, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
-        add(JP_Datos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 520, 300));
+        add(JP_Datos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 520, 370));
 
         JP_Controles.setBackground(new java.awt.Color(255, 204, 0));
         JP_Controles.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -345,7 +407,7 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
                 .addComponent(JB_Modificar)
                 .addGap(20, 20, 20)
                 .addComponent(JB_Cancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addComponent(JB_Eliminar)
                 .addGap(34, 34, 34))
         );
@@ -362,22 +424,27 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton JB_Agregar;
+    private javax.swing.JButton JB_Agregar;
+    private javax.swing.JButton JB_Banco;
     private javax.swing.JButton JB_Buscar;
-    public javax.swing.JButton JB_Cancelar;
-    public javax.swing.JButton JB_Direccion;
-    public javax.swing.JButton JB_Eliminar;
-    public javax.swing.JButton JB_Modificar;
-    public javax.swing.JButton JB_Nuevo;
-    public javax.swing.JButton JB_RFC;
+    private javax.swing.JButton JB_CURP;
+    private javax.swing.JButton JB_Cancelar;
+    private javax.swing.JButton JB_Direccion;
+    private javax.swing.JButton JB_Eliminar;
+    private javax.swing.JButton JB_Ferreteria;
+    private javax.swing.JButton JB_Modificar;
+    private javax.swing.JButton JB_Nuevo;
+    private javax.swing.JButton JB_RFC;
     public javax.swing.JLabel JL_AM;
     public javax.swing.JLabel JL_AP;
     private javax.swing.JLabel JL_Background;
+    public javax.swing.JLabel JL_Banco;
     public javax.swing.JLabel JL_Direccion;
-    public javax.swing.JLabel JL_Email;
     public javax.swing.JLabel JL_Empleados;
+    public javax.swing.JLabel JL_Ferreteria;
     public javax.swing.JLabel JL_Ferreteria3;
     public javax.swing.JLabel JL_ID;
+    public javax.swing.JLabel JL_NSS;
     public javax.swing.JLabel JL_NoFerreteria;
     public javax.swing.JLabel JL_NoFerreteria1;
     public javax.swing.JLabel JL_Nombre;
@@ -388,17 +455,19 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
     public javax.swing.JLabel JL_Usuario;
     private javax.swing.JPanel JP_Controles;
     private javax.swing.JPanel JP_Datos;
-    public javax.swing.JTextField JTF_AM;
-    public javax.swing.JTextField JTF_AP;
+    private javax.swing.JTextField JTF_AM;
+    private javax.swing.JTextField JTF_AP;
+    private javax.swing.JTextField JTF_Banco;
     private javax.swing.JTextField JTF_Busqueda;
-    public javax.swing.JTextField JTF_Direccion;
-    public javax.swing.JTextField JTF_Email;
-    public javax.swing.JTextField JTF_ID;
-    public javax.swing.JTextField JTF_Nombre;
-    public javax.swing.JTextField JTF_Payback;
-    public javax.swing.JTextField JTF_RFC;
-    public javax.swing.JTextField JTF_Telefono;
-    public javax.swing.JTable JT_Clientes;
+    private javax.swing.JTextField JTF_Direccion;
+    private javax.swing.JTextField JTF_Email;
+    private javax.swing.JTextField JTF_ID;
+    private javax.swing.JTextField JTF_NSS;
+    private javax.swing.JTextField JTF_Nombre;
+    private javax.swing.JTextField JTF_Payback;
+    private javax.swing.JTextField JTF_RFC;
+    private javax.swing.JTextField JTF_Telefono;
+    public javax.swing.JTable JT_Empleados;
     public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

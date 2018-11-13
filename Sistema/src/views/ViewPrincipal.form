@@ -15,50 +15,160 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="JMI_Clientes">
+            <Menu class="javax.swing.JMenu" name="JM_Clientes">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Clientes"/>
               </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
-            </MenuItem>
-            <Menu class="javax.swing.JMenu" name="jMenu1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jMenu1"/>
-              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_VerClientes">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_EditarClientes">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Editar registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+              </SubComponents>
             </Menu>
-            <MenuItem class="javax.swing.JMenuItem" name="JMI_Empleados">
+            <Menu class="javax.swing.JMenu" name="JM_Empleados">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Empleados"/>
               </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMI_Proveedores">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Proveedores"/>
-              </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMI_Productos">
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_VerEmpleados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_EditarEmpleados">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Editar registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="JM_Productos">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Productos"/>
               </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
-            </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="JMI_Usuarios">
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_VerProductos">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_EditarProductos">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Editar registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="JM_Proveedores">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Proveedores"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_VerProveedores">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_EditarProveedores">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Editar registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="JM_Sucursales">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Sucursales"/>
+              </Properties>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_VerSucursales">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_EditarSucursales">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Editar registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+            <Menu class="javax.swing.JMenu" name="JM_Usuarios">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Usuarios"/>
               </Properties>
-              <AuxValues>
-                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-              </AuxValues>
+              <SubComponents>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_VerUsuarios">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Ver registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="JMI_EditarUsuarios">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Editar registros"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </MenuItem>
+              </SubComponents>
+            </Menu>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="JM_Operaciones">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Operaciones"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="JMI_Compras">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Compras"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="JMI_Ventas">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ventas"/>
+              </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
