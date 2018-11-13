@@ -76,11 +76,11 @@ public class ModelUsuarios_CRUD {
             st = conexion.createStatement(); //para ejecutar sentencias sql desde java
             rs = st.executeQuery("SELECT * FROM Usuarios;"); //almacena temporalmente los datos de la consulta 
             rs.next(); //avanza de fila en fila 
-            this.setID_U(rs.getString("ID_U")); //asigna y modifica el valor de la variable ID_U
-            this.setUser_U(rs.getString("User_U")); //asigna y modifica el valor de la variable User_U
-            this.setPas_U(rs.getString("Pas_U")); //asigna y modifica el valor de la variable Pas_U
-            this.setTipo_U(rs.getString("Tipo_U")); //asigna y modifica el valor de la variable Tipo_U
-            this.setID_E( rs.getString("ID_E")); //asigna y modifica el valor de la variable ID_E
+            this.setID_U(rs.getString("ID_U")); //actualiza y modifica el valor de la variable ID_U
+            this.setUser_U(rs.getString("User_U")); //actualiza y modifica el valor de la variable User_U
+            this.setPas_U(rs.getString("Pas_U")); //actualiza y modifica el valor de la variable Pas_U
+            this.setTipo_U(rs.getString("Tipo_U")); //actualiza y modifica el valor de la variable Tipo_U
+            this.setID_E( rs.getString("ID_E")); //actualiza y modifica el valor de la variable ID_E
         } catch (SQLException err) {
             JOptionPane.showMessageDialog(null, "Error Model 001: " + err.getMessage()); //Regresa si encuentra error 
         }

@@ -115,15 +115,15 @@ public class ModelSucursales_CRUD {
             st = conexion.createStatement(); //para ejecutar sentencias sql desde java
             rs = st.executeQuery("SELECT * FROM Sucursales;"); //almacena temporalmente los datos de la consulta 
             rs.next(); //avanza de fila en fila 
-            this.setID_S(rs.getString("ID_S")); //Asigna y modifica un valor a la variable ID_S
-            this.setColonia_S(rs.getString("Colonia_S")); //Asigna y modifica un valor a la variable Colonia_S
-            this.setCalle_S(rs.getString("Calle_S")); //Asigna y modifica un valor a la variable Calle_S
-            this.setNumE_S(rs.getString("NumE_S")); //Asigna y modifica un valor a la variable NumE_S
-            this.setNumI_S(rs.getString("NumI_S")); //Asigna y modifica un valor a la variable NumI_S
-            this.setCiudad_S(rs.getString("Ciudad_S")); //Asigna y modifica un valor a la variable Ciudad_S
-            this.setCodigoP_S(rs.getString("CodigoP_S")); //Asigna y modifica un valor a la variable CodigoP_S
-            this.setID_F(rs.getString("ID_F")); //Asigna y modifica un valor a la variable ID_F
-            this.setID_E(rs.getString("ID_E")); //Asigna y modifica un valor a la variable ID_E 
+            this.setID_S(rs.getString("ID_S")); //Actulaliza y modifica un valor a la variable ID_S
+            this.setColonia_S(rs.getString("Colonia_S")); //Actualiza y modifica un valor a la variable Colonia_S
+            this.setCalle_S(rs.getString("Calle_S")); //Actualia y modifica un valor a la variable Calle_S
+            this.setNumE_S(rs.getString("NumE_S")); //Actualia y modifica un valor a la variable NumE_S
+            this.setNumI_S(rs.getString("NumI_S")); //Actualiza y modifica un valor a la variable NumI_S
+            this.setCiudad_S(rs.getString("Ciudad_S")); //Actualiza y modifica un valor a la variable Ciudad_S
+            this.setCodigoP_S(rs.getString("CodigoP_S")); //Actualia y modifica un valor a la variable CodigoP_S
+            this.setID_F(rs.getString("ID_F")); //Actualiza y modifica un valor a la variable ID_F
+            this.setID_E(rs.getString("ID_E")); //Actualiza y modifica un valor a la variable ID_E 
             
         } catch (SQLException err) {
             JOptionPane.showMessageDialog(null, "Error Model 001: " + err.getMessage()); //Regresa si encuentra error 

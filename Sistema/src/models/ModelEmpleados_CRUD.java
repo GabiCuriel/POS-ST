@@ -4,14 +4,10 @@
  * and open the template in the editor.
  */
 package models;
-
-
 /**
  *
- * @author TeddyBear
+ * @author Gabi Curiel
  */
-
-    
 
 /*@set No regresa nada y permite modificar*/
 /*@get Regresa y permite conocer el valor que tiene la variable*/
@@ -137,17 +133,17 @@ public class ModelEmpleados_CRUD {
             st = conexion.createStatement(); //para ejecutar sentencias sql desde java
             rs = st.executeQuery("SELECT * FROM contactos;"); //almacena temporalmente los datos de la consulta 
             rs.next(); //avanza de fila en fila 
-            this.setID_E(rs.getString("ID_E")); //Asigna y modifica un valor a la variable ID_E 
-            this.setNombre_E(rs.getString("Nombre_E")); //Asigna y modifica un valor a la variable Nombre_E 
-            this.setAp_E(rs.getString("Ap_E")); //Asigna y modifica un valor a la variable Ap_E 
-            this.setAm_E(rs.getString("Am_E")); //Asigna y modifica un valor a la variable Am_E 
-            this.setTel_E(rs.getString("Tel_E")); //Asigna y modifica un valor a la variable Tel_E 
-            this.setRfc_E(rs.getString("Rfc_E")); //Asigna y modifica un valor a la variable Rfc_E 
-            this.setCurp_E(rs.getString("Curp_E")); //Asigna y modifica un valor a la variable Curp_E 
-            this.setNss_E(rs.getString("Nss_E")); //Asigna y modifica un valor a la variable Nss_E 
-            this.setID_D(rs.getString("ID_D")); //Asigna y modifica un valor a la variable ID_D 
-            this.setID_B(rs.getString("ID_B"));  //Asigna y modifica un valor a la variable ID_B 
-            this.setID_F(rs.getString("ID_F")); //Asigna y modifica un valor a la variable ID_F
+            this.setID_E(rs.getString("ID_E")); //Actualiza y modifica un valor a la variable ID_E 
+            this.setNombre_E(rs.getString("Nombre_E")); //Actualiza y modifica un valor a la variable Nombre_E 
+            this.setAp_E(rs.getString("Ap_E")); //Actualiza y modifica un valor a la variable Ap_E 
+            this.setAm_E(rs.getString("Am_E")); //Actualiza y modifica un valor a la variable Am_E 
+            this.setTel_E(rs.getString("Tel_E")); //Actualiza y modifica un valor a la variable Tel_E 
+            this.setRfc_E(rs.getString("Rfc_E")); //Actualiza y modifica un valor a la variable Rfc_E 
+            this.setCurp_E(rs.getString("Curp_E")); //Actualiza y modifica un valor a la variable Curp_E 
+            this.setNss_E(rs.getString("Nss_E")); //Actualiza y modifica un valor a la variable Nss_E 
+            this.setID_D(rs.getString("ID_D")); //Actualiza y modifica un valor a la variable ID_D 
+            this.setID_B(rs.getString("ID_B"));  //Actualiza y modifica un valor a la variable ID_B 
+            this.setID_F(rs.getString("ID_F")); //Actualiza y modifica un valor a la variable ID_F
         } catch (SQLException err) {
             JOptionPane.showMessageDialog(null, "Error Model 001: " + err.getMessage()); //Regresa si encuentra error 
         }
