@@ -91,6 +91,10 @@ public class ModelProductos_CRUD {
     public void setCantidad(String Cantidad) {
         this.Cantidad = Cantidad;
     }
+    /**
+     * Método que Realiza la conexión a la base de datos , asi como seleccionar todos los registros de la base,
+     * Manda llamar el método setValues para llenar los datos a la tabla
+     */
     public void conectarDB() {
         try {
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/Soul_Tech");
@@ -104,6 +108,9 @@ public class ModelProductos_CRUD {
             JOptionPane.showMessageDialog(null, "Error ModelProductos 001: " + err.getMessage());
         }
     }
+    /**
+     * Método que jala los valores de la base de datos a las variables creadas
+     */
     public void setValues() {
         try {
             ID = rs.getString("ID_p");
@@ -115,9 +122,15 @@ public class ModelProductos_CRUD {
             Marca = rs.getString("Marca");
             Cantidad = rs.getString("Cantidad_P");
         } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error model 102: " + err.getMessage());
+            JOptionPane.showMessageDialog(null, "Error ModelProductos 002: " + err.getMessage());
         }
     }
+    /**
+     * Método que Actualiza Registros a la base de datos , pidiendo como valores 
+     * Nombre,SKU,Tipo,Precio,Marca
+     * Donde el ID exista en la base de datos 
+     * Esto debido a la clausula Where
+     */
     public void Update_Registro(){
         String update = ("Update Productos Set Nombre_P=? , SKU=? , Tipo=? , Precio=? , Marca=?  Where ID_P=?");
      
@@ -137,6 +150,10 @@ public class ModelProductos_CRUD {
             JOptionPane.showMessageDialog(null, "No se pudo actualizar");
         }
     }
+    /**
+     * Método que Elimina Registros a la base de datos , pidiendo como unico valor el ID
+     * Esto debido a la clausula where que pide que para que se pueda eliminar un producto el ID del mismo debe ser el mismo 
+     */
     public void Deletfrom(){
         String update = ("Delete from Productos Where ID_P=?");
      
@@ -151,6 +168,12 @@ public class ModelProductos_CRUD {
             JOptionPane.showMessageDialog(null, "No se pudo eliminar el registro");
         }
     }
+    /**
+     * Método que Inserta Registros a la base de datos , pidiendo como valores 
+     * Nombre,SKU,Tipo,Precio,Marca,ID_Proveedor
+     * El ID propio es autoincrementable asi que no se necesita
+     */
+    
     public void Insert_Registro(){   
      String insert = ("Insert into Productos (Nombre_P,SKU,Tipo,Precio,Marca,ID_Proveedor) values (?,?,?,?,?,?)");
      
