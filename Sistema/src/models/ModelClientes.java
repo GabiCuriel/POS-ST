@@ -5,6 +5,7 @@
  */
 package models;
 import java.sql.*;
+import java.util.Arrays;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -14,7 +15,15 @@ import javax.swing.table.DefaultTableModel;
  */
 public class ModelClientes {
     private DefaultTableModel modelo = new DefaultTableModel();
+    private DefaultTableModel mBuscar = new DefaultTableModel();
 
+    public DefaultTableModel getmBuscar() {
+        return mBuscar;
+    }
+
+    public void setmBuscar(DefaultTableModel mBuscar) {
+        this.mBuscar = mBuscar;
+    }
     public DefaultTableModel getModelo() {
         return modelo;
     }
@@ -138,8 +147,8 @@ public class ModelClientes {
         modelo.addColumn("Apellido M");
         modelo.addColumn("telefono");
         modelo.addColumn("RFC");
-        modelo.addColumn("Payback");
         modelo.addColumn("Email");
+        modelo.addColumn("Payback");
         modelo.addColumn("Dirección");
         try{
             System.out.println("Modelo - verClientes - llenarTabla");
@@ -157,105 +166,117 @@ public class ModelClientes {
                 Object[] filas = new Object[this.getCantColu()];
                 for (int i = 0; i < this.getCantColu(); i++){
                     filas[i] = rs.getObject(i +  1);
-                    System.out.println(filas[i]);
                 }
                 this.modelo.addRow(filas);
-                this.setTabla(filas);
+                
             }
+            con.close();
         } catch (SQLException err){
             JOptionPane.showMessageDialog(null,"Error ModelClientes 001: "+ err.getMessage());
         }
     }
     
-    /*
-    public void obtenerClientes(){
-        try{
-            PreparedStatement pps = null;
-            ResultSet rrs = null;
-            Conexion conn = new Conexion();
-            Connection con = conn.getConexion();
-            String sql = "SELECT * FROM clientes;";
-            pps = con.prepareStatement(sql);
-            rrs = pps.executeQuery();
-            
-            ResultSetMetaData rsMd = rrs.getMetaData();
-            int cantCol = rsMd.getColumnCount(); 
-            this.setCantColu(cantColu);
-            while (rrs.next()){
-                Object[] filas = new Object[cantCol];
-                
-                for (int i = 0; i < cantCol; i++){
-                    filas[i] =  rrs.getObject(i + 1);
-                    System.out.println(filas[i]);
-                }
-                this.setPrueba(filas);
-            }
-        }catch (SQLException e){
-            JOptionPane.showMessageDialog(null,"Error ModelClientes 003: "+ e.getMessage());
-        }     
-    }
-    
-    public void obtenerDireccion(){
-        String direcion = "";
-        try{
-            PreparedStatement pps = null;
-            ResultSet rrs = null;
-            Conexion conn = new Conexion();
-            Connection con = conn.getConexion();
-            String sql = "SELECT * FROM direcciones;";
-            pps = con.prepareStatement(sql);
-            rrs = pps.executeQuery();
-            
-            ResultSetMetaData rsMd = rrs.getMetaData();
-            int cantCol = rsMd.getColumnCount();
-            
-            while (rrs.next()){
-                Object[] filas = new Object[cantCol];
-                
-                for (int i = 0; i < cantCol; i++){
-                    filas[i] =  rrs.getObject(i + 1);
-                    direcion+=filas[i]+" ";
-                    System.out.println(filas[i]);
-                }
-                System.out.println(direcion);
-                this.setDireccion_CL(direcion);
-            }
-        }catch (SQLException e){
-            JOptionPane.showMessageDialog(null,"Error ModelClientes 003: "+ e.getMessage());
-        }     
-    }
-    
     public void concatenarDireccionSQL(){
         try{
-            String value="";
             PreparedStatement pps = null;
             ResultSet rrs = null;
             Conexion conn = new Conexion();
             Connection con = conn.getConexion();
-            String sql = "SELECT CONCAT(CALLE_D,\" COL. \",COL_D,\" CP. \",CP_D,\", \",CD_D,\", \",EDO_D) FROM DIRECCIONES;";
-            System.out.println(sql);
+            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NO_INT_D, direcciones.NO_EXT_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D;";
             pps = con.prepareStatement(sql);
             rrs = pps.executeQuery();
+            String direccion = "";
             ResultSetMetaData rsMd = rrs.getMetaData();
             int cantCol = rsMd.getColumnCount(); 
-            System.out.println("##############");
             Object[] filas = new Object[cantCol];
+            int x = 0;
             while (rrs.next()){
                 for (int i = 0; i < cantCol; i++){
                     filas[i] =  rrs.getObject(i + 1);
-                    value += Arrays.toString(filas);
-                    System.out.println(filas[i]);
-                    System.out.println("%%%%%");
-                    System.out.println(value);
+                    direccion+=filas[i]+" ";
                 }
+                System.out.println("//////////////////7");
+                System.out.println(direccion);
+                modelo.setValueAt(direccion, x, 8);
+                direccion = "";
+                x++;
             }
             
         }catch (SQLException e){
             JOptionPane.showMessageDialog(null,"Error ModelClientes 003: "+ e.getMessage());
-        }  
-        System.out.println("$$$$$$$");
-        System.out.println(this.getDireccion());
+        }          
+    }
+    
+    public void buscarCliente(String value){
+        try{
+            if (this.getCantColu() != 0){
+                for(int cc = 0; cc < this.getCantColu(); cc++ ){
+                    mBuscar.removeRow(cc);
+                }
+            } else{
+                mBuscar.addColumn("ID");
+            mBuscar.addColumn("Nombre"); 
+            mBuscar.addColumn("Apellido P");
+            mBuscar.addColumn("Apellido M");
+            mBuscar.addColumn("telefono");
+            mBuscar.addColumn("RFC");
+            mBuscar.addColumn("Email");
+            mBuscar.addColumn("Payback");
+            mBuscar.addColumn("Dirección");
+            System.out.println("Modelo - verClientes - buscarClientes");
+            PreparedStatement ps = null;
+            ResultSet rs = null;
+            Conexion conn = new Conexion();
+            Connection con = conn.getConexion();
+            String sql;
+            sql = "SELECT * FROM clientes WHERE NOMBRE_CL = '"+value+"';";
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+            ResultSetMetaData rsMd = rs.getMetaData();
+            this.setCantColu(rsMd.getColumnCount());
+            while (rs.next()){
+                Object[] filas = new Object[this.getCantColu()];
+                for (int i = 0; i < this.getCantColu(); i++){
+                    filas[i] = rs.getObject(i +  1);
+                }
+                this.mBuscar.addRow(filas);
+                System.out.println(Arrays.toString(filas));
+            }
+            con.close();
+            }
+        } catch (SQLException err){
+            JOptionPane.showMessageDialog(null,"Error ModelClientes 001: "+ err.getMessage());
+        }
         
     }
-    */
+    public void concatenarDireccionBusqueda(String value){
+        try{
+            PreparedStatement pps = null;
+            ResultSet rrs = null;
+            Conexion conn = new Conexion();
+            Connection con = conn.getConexion();
+            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NO_INT_D, direcciones.NO_EXT_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D, direcciones.ID_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D WHERE clientes.NOMBRE_CL = '"+value+"';";
+            pps = con.prepareStatement(sql);
+            rrs = pps.executeQuery();
+            String direccion = "";
+            ResultSetMetaData rsMd = rrs.getMetaData();
+            int cantCol = rsMd.getColumnCount(); 
+            Object[] filas = new Object[cantCol];
+            int x = 0;
+            while (rrs.next()){
+                for (int i = 0; i < cantCol; i++){
+                    filas[i] =  rrs.getObject(i + 1);
+                    direccion+=filas[i]+" ";
+                }
+                System.out.println("##########################3");
+                System.out.println(direccion);
+                mBuscar.setValueAt(direccion, x, 8);
+                direccion = "";
+                x++;
+            }
+            
+        }catch (SQLException e){
+            JOptionPane.showMessageDialog(null,"Error ModelClientes 003: "+ e.getMessage());
+        }          
+    }
 }

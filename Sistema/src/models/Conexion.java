@@ -16,7 +16,7 @@ import java.sql.Statement;
  * @author TeddyBear
  */
 public class Conexion {
-    private final String base = "soul_tech";
+    private final String base = "soultech";
     private final String user = "root";
     private final String password = "";
     private final String url = "jdbc:mysql://localhost/" + base;
