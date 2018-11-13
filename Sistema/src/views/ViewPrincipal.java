@@ -30,12 +30,27 @@ public class ViewPrincipal extends javax.swing.JFrame {
         JL_Background = new javax.swing.JLabel();
         JMB_Menu = new javax.swing.JMenuBar();
         JM_Catalogos = new javax.swing.JMenu();
-        JMI_Clientes = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        JMI_Empleados = new javax.swing.JMenuItem();
-        JMI_Proveedores = new javax.swing.JMenuItem();
-        JMI_Productos = new javax.swing.JMenuItem();
-        JMI_Usuarios = new javax.swing.JMenuItem();
+        JM_Clientes = new javax.swing.JMenu();
+        JMI_VerClientes = new javax.swing.JMenuItem();
+        JMI_EditarClientes = new javax.swing.JMenuItem();
+        JM_Empleados = new javax.swing.JMenu();
+        JMI_VerEmpleados = new javax.swing.JMenuItem();
+        JMI_EditarEmpleados = new javax.swing.JMenuItem();
+        JM_Productos = new javax.swing.JMenu();
+        JMI_VerProductos = new javax.swing.JMenuItem();
+        JMI_EditarProductos = new javax.swing.JMenuItem();
+        JM_Proveedores = new javax.swing.JMenu();
+        JMI_VerProveedores = new javax.swing.JMenuItem();
+        JMI_EditarProveedores = new javax.swing.JMenuItem();
+        JM_Sucursales = new javax.swing.JMenu();
+        JMI_VerSucursales = new javax.swing.JMenuItem();
+        JMI_EditarSucursales = new javax.swing.JMenuItem();
+        JM_Usuarios = new javax.swing.JMenu();
+        JMI_VerUsuarios = new javax.swing.JMenuItem();
+        JMI_EditarUsuarios = new javax.swing.JMenuItem();
+        JM_Operaciones = new javax.swing.JMenu();
+        JMI_Compras = new javax.swing.JMenuItem();
+        JMI_Ventas = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -45,25 +60,77 @@ public class ViewPrincipal extends javax.swing.JFrame {
 
         JM_Catalogos.setText("Catalogos");
 
-        JMI_Clientes.setText("Clientes");
-        JM_Catalogos.add(JMI_Clientes);
+        JM_Clientes.setText("Clientes");
 
-        jMenu1.setText("jMenu1");
-        JM_Catalogos.add(jMenu1);
+        JMI_VerClientes.setText("Ver registros");
+        JM_Clientes.add(JMI_VerClientes);
 
-        JMI_Empleados.setText("Empleados");
-        JM_Catalogos.add(JMI_Empleados);
+        JMI_EditarClientes.setText("Editar registros");
+        JM_Clientes.add(JMI_EditarClientes);
 
-        JMI_Proveedores.setText("Proveedores");
-        JM_Catalogos.add(JMI_Proveedores);
+        JM_Catalogos.add(JM_Clientes);
 
-        JMI_Productos.setText("Productos");
-        JM_Catalogos.add(JMI_Productos);
+        JM_Empleados.setText("Empleados");
 
-        JMI_Usuarios.setText("Usuarios");
-        JM_Catalogos.add(JMI_Usuarios);
+        JMI_VerEmpleados.setText("Ver registros");
+        JM_Empleados.add(JMI_VerEmpleados);
+
+        JMI_EditarEmpleados.setText("Editar registros");
+        JM_Empleados.add(JMI_EditarEmpleados);
+
+        JM_Catalogos.add(JM_Empleados);
+
+        JM_Productos.setText("Productos");
+
+        JMI_VerProductos.setText("Ver registros");
+        JM_Productos.add(JMI_VerProductos);
+
+        JMI_EditarProductos.setText("Editar registros");
+        JM_Productos.add(JMI_EditarProductos);
+
+        JM_Catalogos.add(JM_Productos);
+
+        JM_Proveedores.setText("Proveedores");
+
+        JMI_VerProveedores.setText("Ver registros");
+        JM_Proveedores.add(JMI_VerProveedores);
+
+        JMI_EditarProveedores.setText("Editar registros");
+        JM_Proveedores.add(JMI_EditarProveedores);
+
+        JM_Catalogos.add(JM_Proveedores);
+
+        JM_Sucursales.setText("Sucursales");
+
+        JMI_VerSucursales.setText("Ver registros");
+        JM_Sucursales.add(JMI_VerSucursales);
+
+        JMI_EditarSucursales.setText("Editar registros");
+        JM_Sucursales.add(JMI_EditarSucursales);
+
+        JM_Catalogos.add(JM_Sucursales);
+
+        JM_Usuarios.setText("Usuarios");
+
+        JMI_VerUsuarios.setText("Ver registros");
+        JM_Usuarios.add(JMI_VerUsuarios);
+
+        JMI_EditarUsuarios.setText("Editar registros");
+        JM_Usuarios.add(JMI_EditarUsuarios);
+
+        JM_Catalogos.add(JM_Usuarios);
 
         JMB_Menu.add(JM_Catalogos);
+
+        JM_Operaciones.setText("Operaciones");
+
+        JMI_Compras.setText("Compras");
+        JM_Operaciones.add(JMI_Compras);
+
+        JMI_Ventas.setText("Ventas");
+        JM_Operaciones.add(JMI_Ventas);
+
+        JMB_Menu.add(JM_Operaciones);
 
         setJMenuBar(JMB_Menu);
 
@@ -109,12 +176,27 @@ public class ViewPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JL_Background;
     public javax.swing.JMenuBar JMB_Menu;
-    public javax.swing.JMenuItem JMI_Clientes;
-    public javax.swing.JMenuItem JMI_Empleados;
-    public javax.swing.JMenuItem JMI_Productos;
-    public javax.swing.JMenuItem JMI_Proveedores;
-    public javax.swing.JMenuItem JMI_Usuarios;
+    private javax.swing.JMenuItem JMI_Compras;
+    public javax.swing.JMenuItem JMI_EditarClientes;
+    public javax.swing.JMenuItem JMI_EditarEmpleados;
+    public javax.swing.JMenuItem JMI_EditarProductos;
+    public javax.swing.JMenuItem JMI_EditarProveedores;
+    public javax.swing.JMenuItem JMI_EditarSucursales;
+    public javax.swing.JMenuItem JMI_EditarUsuarios;
+    private javax.swing.JMenuItem JMI_Ventas;
+    public javax.swing.JMenuItem JMI_VerClientes;
+    public javax.swing.JMenuItem JMI_VerEmpleados;
+    public javax.swing.JMenuItem JMI_VerProductos;
+    public javax.swing.JMenuItem JMI_VerProveedores;
+    public javax.swing.JMenuItem JMI_VerSucursales;
+    public javax.swing.JMenuItem JMI_VerUsuarios;
     public javax.swing.JMenu JM_Catalogos;
-    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu JM_Clientes;
+    private javax.swing.JMenu JM_Empleados;
+    private javax.swing.JMenu JM_Operaciones;
+    private javax.swing.JMenu JM_Productos;
+    private javax.swing.JMenu JM_Proveedores;
+    private javax.swing.JMenu JM_Sucursales;
+    private javax.swing.JMenu JM_Usuarios;
     // End of variables declaration//GEN-END:variables
 }

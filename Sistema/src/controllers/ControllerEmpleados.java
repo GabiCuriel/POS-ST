@@ -5,18 +5,39 @@
  */
 package controllers;
 
-import models.ModelEmpleados_CRUD;
-import views.ViewEmpleados;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import models.*;
+import views.*;
 
 /**
  *
  * @author TeddyBear
  */
 public class ControllerEmpleados {
-    public ModelEmpleados_CRUD modelEmpleados;
+    public ModelEmpleados modelEmpleados;
     public ViewEmpleados viewEmpleados;
-    public ControllerEmpleados(ModelEmpleados_CRUD modelEmpleados, ViewEmpleados viewEmpleados) {
+
+    ActionListener actionListener = new ActionListener(){
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+        }
+        
+    };
+    public ControllerEmpleados(ModelEmpleados modelEmpleados, ViewEmpleados viewEmpleados) {
+        this.modelEmpleados = modelEmpleados;
+        this.viewEmpleados = viewEmpleados;
+        setActionListener();
+        initBD();
+    }
+    
+    private void setActionListener(){
         
     }
+    private void initBD(){
+    }
+    
     
 }

@@ -4,6 +4,15 @@
  * and open the template in the editor.
  */
 package models;
+
+
+/**
+ *
+ * @author TeddyBear
+ */
+
+    
+
 /*@set No regresa nada y permite modificar*/
 /*@get Regresa y permite conocer el valor que tiene la variable*/
 import java.sql.Connection;
@@ -165,4 +174,5 @@ public class ModelEmpleados_CRUD {
         System.out.print(sql);//Para verificar el funcionamiento correcto de la concatenacion
         st.executeUpdate(sql); //Ejecutar la consulta sql 
     }
+
 }

@@ -9,12 +9,12 @@ package views;
  *
  * @author Juan Pablo
  */
-public class ViewUsuarios_CRUD extends javax.swing.JPanel {
+public class ViewSucursales_CRUD extends javax.swing.JPanel {
 
     /**
-     * Creates new form ViewUsuarios_CRUD
+     * Creates new form ViewSucursales_CRUD
      */
-    public ViewUsuarios_CRUD() {
+    public ViewSucursales_CRUD() {
         initComponents();
     }
 
@@ -28,8 +28,8 @@ public class ViewUsuarios_CRUD extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        JT_Usuarios = new javax.swing.JTable();
-        JL_Empleados = new javax.swing.JLabel();
+        JT_Sucursales = new javax.swing.JTable();
+        JL_Sucursales = new javax.swing.JLabel();
         JB_Buscar = new javax.swing.JButton();
         JTF_Busqueda = new javax.swing.JTextField();
         JL_NoFerreteria = new javax.swing.JLabel();
@@ -39,13 +39,10 @@ public class ViewUsuarios_CRUD extends javax.swing.JPanel {
         JL_Usuario = new javax.swing.JLabel();
         JP_Datos = new javax.swing.JPanel();
         JL_ID = new javax.swing.JLabel();
-        JL_Nombre = new javax.swing.JLabel();
-        JL_Tipo = new javax.swing.JLabel();
-        JL_Empleado = new javax.swing.JLabel();
+        JL_Direccion = new javax.swing.JLabel();
         JTF_ID = new javax.swing.JTextField();
-        JTF_Nombre = new javax.swing.JTextField();
-        JTF_Empleado = new javax.swing.JTextField();
-        JCB_Usuario = new javax.swing.JComboBox<>();
+        JTF_Direccion = new javax.swing.JTextField();
+        JB_Direccion = new javax.swing.JButton();
         JP_Controles = new javax.swing.JPanel();
         JB_Nuevo = new javax.swing.JButton();
         JB_Agregar = new javax.swing.JButton();
@@ -56,9 +53,9 @@ public class ViewUsuarios_CRUD extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JT_Usuarios.setBackground(new java.awt.Color(255, 204, 51));
-        JT_Usuarios.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-        JT_Usuarios.setModel(new javax.swing.table.DefaultTableModel(
+        JT_Sucursales.setBackground(new java.awt.Color(255, 204, 51));
+        JT_Sucursales.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JT_Sucursales.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -66,17 +63,17 @@ public class ViewUsuarios_CRUD extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Tipo", "Empleado"
+                "ID", "Direccion", "ID Empleado", "Nombre Empleado"
             }
         ));
-        jScrollPane1.setViewportView(JT_Usuarios);
+        jScrollPane1.setViewportView(JT_Sucursales);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 943, 130));
 
-        JL_Empleados.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
-        JL_Empleados.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Empleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/clientes.png"))); // NOI18N
-        add(JL_Empleados, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
+        JL_Sucursales.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
+        JL_Sucursales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_Sucursales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sucursales.png"))); // NOI18N
+        add(JL_Sucursales, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 210, 50));
 
         JB_Buscar.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
         JB_Buscar.setText("Buscar");
@@ -118,23 +115,11 @@ public class ViewUsuarios_CRUD extends javax.swing.JPanel {
         JL_ID.setText("ID");
         JL_ID.setOpaque(true);
 
-        JL_Nombre.setBackground(new java.awt.Color(255, 204, 102));
-        JL_Nombre.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
-        JL_Nombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Nombre.setText("Nombre");
-        JL_Nombre.setOpaque(true);
-
-        JL_Tipo.setBackground(new java.awt.Color(255, 204, 102));
-        JL_Tipo.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
-        JL_Tipo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Tipo.setText("Tipo Usuario");
-        JL_Tipo.setOpaque(true);
-
-        JL_Empleado.setBackground(new java.awt.Color(255, 204, 102));
-        JL_Empleado.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
-        JL_Empleado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_Empleado.setText("NombreEmpleado");
-        JL_Empleado.setOpaque(true);
+        JL_Direccion.setBackground(new java.awt.Color(255, 204, 102));
+        JL_Direccion.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_Direccion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_Direccion.setText("Dirección");
+        JL_Direccion.setOpaque(true);
 
         JTF_ID.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
         JTF_ID.addActionListener(new java.awt.event.ActionListener() {
@@ -143,12 +128,10 @@ public class ViewUsuarios_CRUD extends javax.swing.JPanel {
             }
         });
 
-        JTF_Nombre.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JTF_Direccion.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
 
-        JTF_Empleado.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-
-        JCB_Usuario.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
-        JCB_Usuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ventas", "Compras", "Administrador" }));
+        JB_Direccion.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JB_Direccion.setText("Agregar");
 
         javax.swing.GroupLayout JP_DatosLayout = new javax.swing.GroupLayout(JP_Datos);
         JP_Datos.setLayout(JP_DatosLayout);
@@ -158,44 +141,30 @@ public class ViewUsuarios_CRUD extends javax.swing.JPanel {
                 .addGap(25, 25, 25)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(JP_DatosLayout.createSequentialGroup()
-                        .addComponent(JL_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(JL_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JTF_Nombre))
-                    .addGroup(JP_DatosLayout.createSequentialGroup()
-                        .addComponent(JL_Tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(JCB_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_DatosLayout.createSequentialGroup()
-                        .addComponent(JL_Empleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(JTF_Empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(JTF_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21)
+                        .addComponent(JB_Direccion, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE))
                     .addGroup(JP_DatosLayout.createSequentialGroup()
                         .addComponent(JL_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(JTF_ID, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)))
+                        .addComponent(JTF_ID)))
                 .addContainerGap())
         );
         JP_DatosLayout.setVerticalGroup(
             JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_DatosLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(85, 85, 85)
+                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JL_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JTF_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JL_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTF_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
-                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JL_Tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JCB_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JTF_Empleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JL_Empleado, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47))
+                    .addComponent(JTF_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_Direccion))
+                .addGap(95, 95, 95))
         );
 
         add(JP_Datos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 520, 300));
@@ -266,28 +235,25 @@ public class ViewUsuarios_CRUD extends javax.swing.JPanel {
     private javax.swing.JButton JB_Agregar;
     private javax.swing.JButton JB_Buscar;
     private javax.swing.JButton JB_Cancelar;
+    private javax.swing.JButton JB_Direccion;
     private javax.swing.JButton JB_Eliminar;
     private javax.swing.JButton JB_Modificar;
     private javax.swing.JButton JB_Nuevo;
-    private javax.swing.JComboBox<String> JCB_Usuario;
     private javax.swing.JLabel JL_Background;
-    public javax.swing.JLabel JL_Empleado;
-    public javax.swing.JLabel JL_Empleados;
+    public javax.swing.JLabel JL_Direccion;
     public javax.swing.JLabel JL_Ferreteria3;
     public javax.swing.JLabel JL_ID;
     public javax.swing.JLabel JL_NoFerreteria;
     public javax.swing.JLabel JL_NoFerreteria1;
-    public javax.swing.JLabel JL_Nombre;
-    public javax.swing.JLabel JL_Tipo;
+    public javax.swing.JLabel JL_Sucursales;
     public javax.swing.JLabel JL_TipoUsuario;
     public javax.swing.JLabel JL_Usuario;
     private javax.swing.JPanel JP_Controles;
     private javax.swing.JPanel JP_Datos;
     private javax.swing.JTextField JTF_Busqueda;
-    private javax.swing.JTextField JTF_Empleado;
+    private javax.swing.JTextField JTF_Direccion;
     private javax.swing.JTextField JTF_ID;
-    private javax.swing.JTextField JTF_Nombre;
-    public javax.swing.JTable JT_Usuarios;
+    public javax.swing.JTable JT_Sucursales;
     public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

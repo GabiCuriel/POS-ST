@@ -6,6 +6,7 @@
 package controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
 import views.*;
 import models.*;
 
@@ -19,26 +20,16 @@ public class ControllerClientes {
     ActionListener actionListner = new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent CL) {
-     //       if (CL.getSource() == viewClientes.JB_Eliminar) {
-       //         Delete_cliente();
-         //   } else if (CL.getSource() == viewClientes.JB_Modificar){
-           //     Modifica_cliente();
-      //      } else if (CL.getSource() == viewClientes.JB_Agregar){
-        //        Agregar_cliente();
-          //  }
+            if (CL.getSource() == viewClientes.JB_Buscar) {
+                Buscar_cliente();
+            }
         }
     };
     
-    public void Delete_cliente(){
-        System.out.println("Delete - clientes");
-    }
-    
-    public void Modifica_cliente(){
-        System.out.println("Modifica - clientes");
-    }
-    
-    public void Agregar_cliente(){
-        System.out.println("Agregar - clientes");
+    public void Buscar_cliente(){
+        modelClientes.buscarCliente(viewClientes.JTF_Busqueda.getText());
+        modelClientes.concatenarDireccionBusqueda(viewClientes.JTF_Busqueda.getText());
+        viewClientes.JT_Clientes.setModel(modelClientes.getmBuscar());
         
     }
     
@@ -50,14 +41,12 @@ public class ControllerClientes {
     }
 
     private void setActionListener() {
-  //      viewClientes.JB_Agregar.addActionListener(actionListner);
-    //    viewClientes.JB_Eliminar.addActionListener(actionListner);
-      //  viewClientes.JB_Modificar.addActionListener(actionListner);
-       // viewClientes.jButton4.addActionListener(actionListner);
-                
+        viewClientes.JB_Buscar.addActionListener(actionListner);
     }
 
     private void initBD() {
-        
+        modelClientes.llenarTabla();
+        modelClientes.concatenarDireccionSQL();
+        viewClientes.JT_Clientes.setModel(modelClientes.getModelo());
     }
 }

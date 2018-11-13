@@ -5,7 +5,10 @@
  */
 package controllers;
 
-import models.ModelUsuarios_CRUD;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import models.ModelUsuarios;
 import views.ViewUsuarios;
 
 /**
@@ -13,10 +16,28 @@ import views.ViewUsuarios;
  * @author TeddyBear
  */
 public class ControllerUsuarios {
-    public ModelUsuarios_CRUD modelUsuarios;
+    public ModelUsuarios modelUsuarios;
     public ViewUsuarios viewUsuarios;
-    public ControllerUsuarios(ModelUsuarios_CRUD modelUsuarios, ViewUsuarios viewUsuarios) {
+
+    ActionListener actionListener = new ActionListener(){
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            
+        }
         
+    };
+    public ControllerUsuarios(ModelUsuarios modelUsuarios, ViewUsuarios viewUsuarios) {
+        this.modelUsuarios = modelUsuarios;
+        this.viewUsuarios = viewUsuarios;
+        setActionListener();
+        initBD();
+    }
+    
+    private void setActionListener(){
+        
+    }
+    private void initBD(){
+    
     }
     
 }

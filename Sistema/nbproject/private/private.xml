@@ -3,5 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group/>
+<<<<<<< HEAD
+=======
+=======
+        <group>
+            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/ModelClientes.java</file>
+            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/controllers/ControllerClientes.java</file>
+            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/Conexion.java</file>
+        </group>
+>>>>>>> b92cf75c67813b873add2a02ce52e07976994942
+>>>>>>> afee3767a6dda959cfed9d69f48983a7332f8560
     </open-files>
 </project-private>
