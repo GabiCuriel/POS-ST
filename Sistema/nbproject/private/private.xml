@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/ModelClientes.java</file>
             <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/controllers/ControllerClientes.java</file>
+            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/controllers/ControllerClientes_CRUD.java</file>
+            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewClientes_CRUD.java</file>
+            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/ModelClientes_CRUD.java</file>
             <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/Conexion.java</file>
         </group>
     </open-files>
