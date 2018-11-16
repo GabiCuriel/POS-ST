@@ -4,14 +4,10 @@
  * and open the template in the editor.
  */
 package models;
-
-
 /**
  *
- * @author TeddyBear
+ * @author Gabi Curiel
  */
-
-    
 
 /*@set No regresa nada y permite modificar*/
 /*@get Regresa y permite conocer el valor que tiene la variable*/
@@ -137,28 +133,17 @@ public class ModelEmpleados_CRUD {
             st = conexion.createStatement(); //para ejecutar sentencias sql desde java
             rs = st.executeQuery("SELECT * FROM contactos;"); //almacena temporalmente los datos de la consulta 
             rs.next(); //avanza de fila en fila 
-            ID_E = rs.getString("ID_E"); //almacena los nombres de los usuario en nombre
-            Nombre_E = rs.getString("Nombre_E"); //almacena el nombre de los usuarios en email 
-            Ap_E = rs.getString("Ap_E");
-            Am_E = rs.getString("Am_E");
-            Tel_E = rs.getString("Tel_E");
-            Rfc_E = rs.getString("Rfc_E"); 
-            Curp_E = rs.getString("Curp_E"); 
-            Nss_E = rs.getString("Nss_E"); 
-            ID_D = rs.getString("ID_D"); 
-            ID_B = rs.getString("ID_B"); 
-            ID_F = rs.getString("ID_F");
-            this.setID_E(ID_E);
-            this.setNombre_E(Nombre_E);
-            this.setAp_E(Ap_E);
-            this.setAm_E(Am_E);
-            this.setTel_E(Tel_E);
-            this.setRfc_E(Rfc_E);
-            this.setCurp_E(Curp_E);
-            this.setNss_E(Nss_E);
-            this.setID_D(ID_D);
-            this.setID_B(ID_B);  //asigna un valor a la variable email
-            this.setID_F(ID_F); //asigna un valor a la variable nombre
+            this.setID_E(rs.getString("ID_E")); //Actualiza y modifica un valor a la variable ID_E 
+            this.setNombre_E(rs.getString("Nombre_E")); //Actualiza y modifica un valor a la variable Nombre_E 
+            this.setAp_E(rs.getString("Ap_E")); //Actualiza y modifica un valor a la variable Ap_E 
+            this.setAm_E(rs.getString("Am_E")); //Actualiza y modifica un valor a la variable Am_E 
+            this.setTel_E(rs.getString("Tel_E")); //Actualiza y modifica un valor a la variable Tel_E 
+            this.setRfc_E(rs.getString("Rfc_E")); //Actualiza y modifica un valor a la variable Rfc_E 
+            this.setCurp_E(rs.getString("Curp_E")); //Actualiza y modifica un valor a la variable Curp_E 
+            this.setNss_E(rs.getString("Nss_E")); //Actualiza y modifica un valor a la variable Nss_E 
+            this.setID_D(rs.getString("ID_D")); //Actualiza y modifica un valor a la variable ID_D 
+            this.setID_B(rs.getString("ID_B"));  //Actualiza y modifica un valor a la variable ID_B 
+            this.setID_F(rs.getString("ID_F")); //Actualiza y modifica un valor a la variable ID_F
         } catch (SQLException err) {
             JOptionPane.showMessageDialog(null, "Error Model 001: " + err.getMessage()); //Regresa si encuentra error 
         }
@@ -168,25 +153,22 @@ public class ModelEmpleados_CRUD {
     public void insertarRegistro(String ID_E, String Nombre_E, String Ap_E, String Am_E, String Tel_E, String Rfc_E, String Curp_E, String Nss_E, String ID_D, String ID_B, String ID_F) throws SQLException {
         System.out.print("Programa accion insertarRegistro"); //Mensaje que asegure que funciona el booton insertarRegistro
         String sql = "INSERT INTO Empleados(ID_E,Nombre_E,Ap_E,Am_E,Tel_E,Rfc_E,Curp_E,Nss_E,ID_D,ID_B,ID_F) VALUES" + "('" + ID_E + "','" + Nombre_E + "'','" + Ap_E + "'','" + Am_E + "'','" + Tel_E + "'','" + Rfc_E + "'','" + Curp_E + "'','" + Nss_E + "'','" + ID_D + "'','" + ID_B + "'','" + ID_F + "');";
-        System.out.print(sql);
-        st.executeUpdate(sql);        
-        this.conectarDB();
+        System.out.print(sql);//Para verificar el funcionamiento correcto de la concatenacion
+        st.executeUpdate(sql); //Ejecutar la consulta sql 
     }
     public void modificarRegistro(String ID_E, String Nombre_E, String Ap_E, String Am_E, String Tel_E, String Rfc_E, String Curp_E, String Nss_E, String ID_D, String ID_B, String ID_F) throws SQLException {
         System.out.print("Programa accion modificarRegistro"); //Mensaje que asegure que funciona el bootonpublic modificarRegistro
         String actualID_E = this.getID_E();
         String sql = "UPDATE Empleados SET ID_E='" + ID_E + "',Nombre_E='" + Nombre_E + "',Ap_E='" + Ap_E + "',Am_E='" + Am_E + "',Tel_E='" + Tel_E + "',Rfc_E='" + Rfc_E + "',Curp_E='" + Curp_E + "',Nss_E='" + Nss_E + "',ID_D='" + ID_D + "',ID_B='" + ID_B + "',ID_F='" + ID_F + "' WHERE ID_E='" + actualID_E + "';"; 
-        System.out.print(sql);
-        st.executeUpdate(sql);
-        this.conectarDB();
+        System.out.print(sql);//Para verificar el funcionamiento correcto de la concatenacion
+        st.executeUpdate(sql); //Ejecutar la consulta sql 
     }
 
     public void eliminarRegistro(String email) throws SQLException {
         System.out.print("Programa accion eliminarRegistro"); //Mensaje que asegure que funciona el booton eliminarRegistro
         String sql = "DELETE FROM Empleados WHERE ID_E='" + ID_E + "';";
-        System.out.print(sql);
-        st.executeUpdate(sql); 
-        this.conectarDB();
+        System.out.print(sql);//Para verificar el funcionamiento correcto de la concatenacion
+        st.executeUpdate(sql); //Ejecutar la consulta sql 
     }
 
 }
