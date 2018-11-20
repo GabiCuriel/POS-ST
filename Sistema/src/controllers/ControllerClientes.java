@@ -30,7 +30,6 @@ public class ControllerClientes {
         modelClientes.buscarCliente(viewClientes.JTF_Busqueda.getText());
         modelClientes.concatenarDireccionBusqueda(viewClientes.JTF_Busqueda.getText());
         viewClientes.JT_Clientes.setModel(modelClientes.getmBuscar());
-        
     }
     
     public ControllerClientes(ModelClientes modelClientes, ViewClientes viewClientes ){
