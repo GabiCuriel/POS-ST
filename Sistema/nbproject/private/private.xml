@@ -3,9 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/models/ModelEmpleados_CRUD.java</file>
-            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/models/ModelSucursales_CRUD.java</file>
-            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/models/ModelUsuarios_CRUD.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewCompras.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewEmpleados_CRUD.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewDirecciones_CRUD.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewPrincipal.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewProductos.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewClientes.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewSucursales_CRUD.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewDirecciones.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewUsuarios.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewClientes_CRUD.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewProveedores.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewProductos_CRUD.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewEmpleados.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewProveedores_CRUD.java</file>
         </group>
     </open-files>
 </project-private>
