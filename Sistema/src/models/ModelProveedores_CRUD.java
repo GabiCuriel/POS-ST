@@ -6,68 +6,77 @@
 package models;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.JOptionPane;
 import java.sql.PreparedStatement;
+import java.sql.ResultSetMetaData;
+import javax.swing.table.DefaultTableModel;
 
 
 public class ModelProveedores_CRUD {
-    private Connection conexion;
-    private Statement st;
-    private ResultSet rs;
-    private PreparedStatement pst;
+    private PreparedStatement ps = null;
+    private ResultSet rs = null;
+    private Conexion con = new Conexion();
+    private Connection conn = con.getConexion();
 
-    private String ID;
-    private String Nombre_Pr;
-    private String Direccion;
-    private String Telefono;
-    private String Email;
-
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
-    public String getNombre_Pr() {
-        return Nombre_Pr;
-    }
-
-    public void setNombre_Pr(String Nombre_Pr) {
-        this.Nombre_Pr = Nombre_Pr;
-    }
-
-    public String getDireccion() {
-        return Direccion;
-    }
-
-    public void setDireccion(String Direccion) {
-        this.Direccion = Direccion;
-    }
-
-    public String getTelefono() {
-        return Telefono;
-    }
-
-    public void setTelefono(String Telefono) {
-        this.Telefono = Telefono;
-    }
-
-    public String getEmail() {
-        return Email;
-    }
-
-    public void setEmail(String Email) {
-        this.Email = Email;
-    }
+    private String ID_PR;
+    private String Nombre_PR;
+    private String ID_D;
+    private String Telefono_PR;
+    private String Email_PR;
     
+    private int CantColu;
+    
+    private DefaultTableModel modelo = new DefaultTableModel();
 
-   
+    public String getID_PR() {
+        return ID_PR;
+    }
+
+    public void setID_PR(String ID_PR) {
+        this.ID_PR = ID_PR;
+    }
+
+    public String getNombre_PR() {
+        return Nombre_PR;
+    }
+
+    public void setNombre_PR(String Nombre_PR) {
+        this.Nombre_PR = Nombre_PR;
+    }
+
+    public String getID_D() {
+        return ID_D;
+    }
+
+    public void setID_D(String ID_D) {
+        this.ID_D = ID_D;
+    }
+
+    public String getTelefono_PR() {
+        return Telefono_PR;
+    }
+
+    public void setTelefono_PR(String Telefono_PR) {
+        this.Telefono_PR = Telefono_PR;
+    }
+
+    public String getEmail_PR() {
+        return Email_PR;
+    }
+
+    public void setEmail_PR(String Email_PR) {
+        this.Email_PR = Email_PR;
+    }
+
+    public int getCantColu() {
+        return CantColu;
+    }
+
+    public void setCantColu(int CantColu) {
+        this.CantColu = CantColu;
+    }
 
     public void conectarDB() {
         try {
