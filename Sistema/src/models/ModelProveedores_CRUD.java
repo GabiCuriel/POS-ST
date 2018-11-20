@@ -78,81 +78,110 @@ public class ModelProveedores_CRUD {
         this.CantColu = CantColu;
     }
 
-    public void conectarDB() {
-        try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/Soul_Tech");
-            st = conexion.createStatement();
-            String sql = "SELECT * FROM Productos;";
-            System.out.println(sql);
-            rs = st.executeQuery(sql);
-            rs.next();
-            setValues();
-        } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error ModelProductos 001: " + err.getMessage());
-        }
+    public DefaultTableModel getModelo() {
+        return modelo;
     }
-    public void setValues() {
-        try {
-            ID = rs.getString("ID_Pr");
-            Nombre_Pr = rs.getString("Nombre_Pr");
-            Telefono = rs.getString("Tel_Pr");
-            Direccion = rs.getString("ID_D");
-            Email = rs.getString("Email");
-            
-           
-        } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error model 102: " + err.getMessage());
-        }
+
+    public void setModelo(DefaultTableModel modelo) {
+        this.modelo = modelo;
     }
+    
+    
+   
+
+    
     public void Update_Registro(){
-        String update = ("Update Proveedor Set Nombre_Pr=? , Tel_Pr=? , ID_D=? , Email=?  Where ID_Pr=?");
+        String update = ("UPDATE proveedor SET NOMBRE_PR=? , TEL_PR=?, EMAIL_PR=?  WHERE ID_PR=?");
      
-        Connection con = conexion;
         try {
-            pst = (PreparedStatement) con.prepareStatement(update);            
-            pst.setString(1, Nombre_Pr);
-            pst.setString(2, Telefono);
-            pst.setString(3, Direccion);
-            pst.setString(4, Email);
-            pst.setString(5, ID);
-            
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Se actualizó el registro");
-            
+            ps = (PreparedStatement) conn.prepareStatement(update);            
+            ps.setString(1, Nombre_PR);
+            ps.setString(2, Telefono_PR);
+            ps.setString(3, Email_PR);
+            ps.setString(4, ID_PR);
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Se actualizó el registro");
         }catch(SQLException err){ 
-            JOptionPane.showMessageDialog(null, "No se pudo actualizar");
+            JOptionPane.showMessageDialog(null, err.getMessage());
         }
     }
     public void Deletfrom(){
-        String update = ("Delete from Productos Where ID_Pr=?");
-     
-        Connection con = conexion;
+        String update = ("DELETE FROM productos WHERE ID_PR=?");
         try {
-            pst = (PreparedStatement) con.prepareStatement(update);            
-            pst.setString(1, ID);
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Se Eliminó el registro");
-            
+            ps = (PreparedStatement) conn.prepareStatement(update);            
+            ps.setString(1, ID_PR);
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Se Eliminó el registro");
         }catch(SQLException err){ 
-            JOptionPane.showMessageDialog(null, "No se pudo eliminar el registro");
+            JOptionPane.showMessageDialog(null, err.getMessage());
         }
     }
     public void Insert_Registro(){   
-     String insert = ("Insert into Productos (Nombre_Pr,Tel_Pr,ID_D,Email) values (?,?,?,?)");
-     
-        Connection con = conexion;
+     String insert = ("INSERT INTO productos (NOMBRE_PR,TEL_PR,ID_D,EMAIL_PR) VALUES (?,?,?,?)");
         try {
-            pst = (PreparedStatement) con.prepareStatement(insert);            
-            pst.setString(1, Nombre_Pr);
-            pst.setString(2, Telefono);
-            pst.setString(3, Direccion);
-            pst.setString(4, Email);
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Se inserto el nuevo producto");
-            
+            ps = (PreparedStatement) conn.prepareStatement(insert);            
+            ps.setString(1, Nombre_PR);
+            ps.setString(2, Telefono_PR);
+            ps.setString(3, ID_D);
+            ps.setString(4, Email_PR);
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Se inserto el nuevo producto");
+           
         }catch(SQLException err){ 
-            JOptionPane.showMessageDialog(null, "No se pudo insertar el nuevo producto");
+            JOptionPane.showMessageDialog(null, err.getMessage());
         }
     }    
+    
+    
+    public void llenarTabla(){
+        modelo = new DefaultTableModel();
+        modelo.addColumn("ID");
+        modelo.addColumn("Nombre");
+        modelo.addColumn("Telefono");
+        modelo.addColumn("Direccion");
+        modelo.addColumn("Email");
+        String sql = "SELECT * FROM proveedores;";
+        try{
+            System.out.println("Modelo -editarProveedores - llenarTabla");
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            ResultSetMetaData rsMd = rs.getMetaData();
+            this.setCantColu(rsMd.getColumnCount());
+            
+            while(rs.next()){
+                Object[] filas = new Object[this.getCantColu()];
+                for (int i = 0; i <this.getCantColu();i++){
+                    filas[i] = rs.getObject(i+1);
+                }
+                this.modelo.addRow(filas);
+            }
+        }catch(SQLException err){ 
+            JOptionPane.showMessageDialog(null,"Error ModelEmpleados_CRUD 001: "+ err.getMessage());
+        }
+    }
+    public void obtenerDireccion(){
+            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NO_INT_D, direcciones.NO_EXT_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D FROM direcciones INNER JOIN proveedores ON proveedores.ID_D = direcciones.ID_D;";
+        try{
+            int x=0;
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            String direccion = "";
+            ResultSetMetaData rsMd = rs.getMetaData();
+            this.setCantColu(rsMd.getColumnCount());
+            
+            while(rs.next()){
+                Object[] filas = new Object[this.getCantColu()];
+                for (int i =0; i < this.getCantColu(); i++){
+                    filas[i] = rs.getObject(i+1);
+                    direccion+=filas[i]+" ";
+                }
+                modelo.setValueAt(direccion, x, 3);
+                direccion = "";
+                x++;
+            }
+        }catch(SQLException err){ 
+            JOptionPane.showMessageDialog(null,"Error ModelEmpleados_CRUD 002: "+ err.getMessage());
+        }
+    }
 }
 
