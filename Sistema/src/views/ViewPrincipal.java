@@ -27,6 +27,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JL_Logo = new javax.swing.JLabel();
         JL_Background = new javax.swing.JLabel();
         JMB_Menu = new javax.swing.JMenuBar();
         JM_Catalogos = new javax.swing.JMenu();
@@ -54,6 +55,9 @@ public class ViewPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        JL_Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/ACME.png"))); // NOI18N
+        getContentPane().add(JL_Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 90, 430, 400));
 
         JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
         getContentPane().add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 580));
@@ -175,6 +179,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel JL_Background;
+    private javax.swing.JLabel JL_Logo;
     public javax.swing.JMenuBar JMB_Menu;
     private javax.swing.JMenuItem JMI_Compras;
     public javax.swing.JMenuItem JMI_EditarClientes;
