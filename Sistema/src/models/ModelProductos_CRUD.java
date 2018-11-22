@@ -22,12 +22,10 @@ public class ModelProductos_CRUD {
     private String ID;
     private String Nombre;
     private String SKU;
-    private String Proveedor;
     private String Tipo;
     private String Precio;
     private String Marca;
-    private String Cantidad;
-
+    
     public String getID() {
         return ID;
     }
@@ -50,14 +48,6 @@ public class ModelProductos_CRUD {
 
     public void setSKU(String SKU) {
         this.SKU = SKU;
-    }
-
-    public String getProveedor() {
-        return Proveedor;
-    }
-
-    public void setProveedor(String Proveedor) {
-        this.Proveedor = Proveedor;
     }
 
     public String getTipo() {
@@ -83,14 +73,6 @@ public class ModelProductos_CRUD {
     public void setMarca(String Marca) {
         this.Marca = Marca;
     }
-
-    public String getCantidad() {
-        return Cantidad;
-    }
-
-    public void setCantidad(String Cantidad) {
-        this.Cantidad = Cantidad;
-    }
     /**
      * Método que Realiza la conexión a la base de datos , asi como seleccionar todos los registros de la base,
      * Manda llamar el método setValues para llenar los datos a la tabla
@@ -113,14 +95,12 @@ public class ModelProductos_CRUD {
      */
     public void setValues() {
         try {
-            ID = rs.getString("ID_p");
-            Nombre = rs.getString("Nombre_P");
-            Proveedor = rs.getString("ID_Proveedor");
+            ID = rs.getString("ID_P");
+            Nombre = rs.getString("NOMBRE_P");
             SKU = rs.getString("SKU");
             Tipo = rs.getString("Tipo");
             Precio = rs.getString("Precio");
             Marca = rs.getString("Marca");
-            Cantidad = rs.getString("Cantidad_P");
         } catch (SQLException err) {
             JOptionPane.showMessageDialog(null, "Error ModelProductos 002: " + err.getMessage());
         }
@@ -132,16 +112,16 @@ public class ModelProductos_CRUD {
      * Esto debido a la clausula Where
      */
     public void Update_Registro(){
-        String update = ("Update Productos Set Nombre_P=? , SKU=? , Tipo=? , Precio=? , Marca=?  Where ID_P=?");
+        String update = ("Update Productos Set NOMBRE_P=? , TIPO_p=? , MARCA_p=? , SKU_P=? , PRECIO=?  Where ID_P=?");
      
         Connection con = conexion;
         try {
             pst = (PreparedStatement) con.prepareStatement(update);            
             pst.setString(1, Nombre);
-            pst.setString(2, SKU);
-            pst.setString(3, Tipo);
-            pst.setString(4, Precio);
-            pst.setString(5, Marca);
+            pst.setString(2, Tipo);
+            pst.setString(3, Marca);
+            pst.setString(4, SKU);
+            pst.setString(5, Precio);
             pst.setString(6, ID);
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Se actualizó el registro");
@@ -175,17 +155,16 @@ public class ModelProductos_CRUD {
      */
     
     public void Insert_Registro(){   
-     String insert = ("Insert into Productos (Nombre_P,SKU,Tipo,Precio,Marca,ID_Proveedor) values (?,?,?,?,?,?)");
+     String insert = ("Insert into Productos (NOMBRE_P,TIPO_p,MARCA_p,SKU_P,PRECIO) values (?,?,?,?,?)");
      
         Connection con = conexion;
         try {
             pst = (PreparedStatement) con.prepareStatement(insert);            
             pst.setString(1, Nombre);
-            pst.setString(2, SKU);
-            pst.setString(3, Tipo);
-            pst.setString(4, Precio);
-            pst.setString(5, Marca);
-            pst.setString(6, Proveedor);
+            pst.setString(2, Tipo);
+            pst.setString(3, Marca);
+            pst.setString(4, SKU);
+            pst.setString(5, Precio);
             
                 pst.executeUpdate();
                 JOptionPane.showMessageDialog(null, "Se inserto el nuevo producto");

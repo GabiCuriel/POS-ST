@@ -3,17 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/models/ModelLogin.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/models/ModelProveedores_CRUD.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewCompras.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewSucursales_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewLogin.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewPrincipal.java</file>
-            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/bd/bd_punto_venta.sql</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/controllers/ControllerLogin.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/controllers/ControllerClientes.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/main/Main.java</file>
-=======
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/ModelClientes.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/controllers/ControllerClientes.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/Conexion.java</file>
->>>>>>> b92cf75c67813b873add2a02ce52e07976994942
         </group>
     </open-files>
 </project-private>
