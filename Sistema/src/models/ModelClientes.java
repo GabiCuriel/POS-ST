@@ -178,21 +178,21 @@ public class ModelClientes {
     
     public void concatenarDireccionSQL(){
         try{
-            PreparedStatement pps = null;
-            ResultSet rrs = null;
+            PreparedStatement ps = null;
+            ResultSet rs = null;
             Conexion conn = new Conexion();
             Connection con = conn.getConexion();
             String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NO_INT_D, direcciones.NO_EXT_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D;";
-            pps = con.prepareStatement(sql);
-            rrs = pps.executeQuery();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
             String direccion = "";
-            ResultSetMetaData rsMd = rrs.getMetaData();
+            ResultSetMetaData rsMd = rs.getMetaData();
             int cantCol = rsMd.getColumnCount(); 
             Object[] filas = new Object[cantCol];
             int x = 0;
-            while (rrs.next()){
+            while (rs.next()){
                 for (int i = 0; i < cantCol; i++){
-                    filas[i] =  rrs.getObject(i + 1);
+                    filas[i] =  rs.getObject(i + 1);
                     direccion+=filas[i]+" ";
                 }
                 System.out.println("//////////////////7");
@@ -209,12 +209,8 @@ public class ModelClientes {
     
     public void buscarCliente(String value){
         try{
-            if (this.getCantColu() != 0){
-                for(int cc = 0; cc < this.getCantColu(); cc++ ){
-                    mBuscar.removeRow(cc);
-                }
-            } else{
-                mBuscar.addColumn("ID");
+            mBuscar = new DefaultTableModel();
+            mBuscar.addColumn("ID");
             mBuscar.addColumn("Nombre"); 
             mBuscar.addColumn("Apellido P");
             mBuscar.addColumn("Apellido M");
@@ -243,7 +239,6 @@ public class ModelClientes {
                 System.out.println(Arrays.toString(filas));
             }
             con.close();
-            }
         } catch (SQLException err){
             JOptionPane.showMessageDialog(null,"Error ModelClientes 001: "+ err.getMessage());
         }

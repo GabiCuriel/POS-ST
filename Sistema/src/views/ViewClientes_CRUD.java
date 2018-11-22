@@ -78,7 +78,7 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID", "Nombre", "Apellido Paterno", "Apellido Materno", "Telefono", "RFC", "Dirección", "PayBack", "E-Mail"
+                "ID", "Nombre", "Apellido Paterno", "Apellido Materno", "Telefono", "RFC", "Payback", "E-Mail", "Dirección"
             }
         ));
         jScrollPane1.setViewportView(JT_Clientes);
