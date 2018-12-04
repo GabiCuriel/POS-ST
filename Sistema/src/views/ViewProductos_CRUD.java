@@ -27,6 +27,7 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JL_RFC = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         JT_Productos = new javax.swing.JTable();
         JL_Empleados = new javax.swing.JLabel();
@@ -42,7 +43,6 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
         JL_Nombre = new javax.swing.JLabel();
         JL_AP = new javax.swing.JLabel();
         JL_AM = new javax.swing.JLabel();
-        JL_RFC = new javax.swing.JLabel();
         JL_Payback = new javax.swing.JLabel();
         JB_RFC = new javax.swing.JButton();
         JTF_ID = new javax.swing.JTextField();
@@ -58,6 +58,12 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
         JB_Cancelar = new javax.swing.JButton();
         JB_Eliminar = new javax.swing.JButton();
         JL_Background = new javax.swing.JLabel();
+
+        JL_RFC.setBackground(new java.awt.Color(255, 204, 102));
+        JL_RFC.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JL_RFC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JL_RFC.setText("SKU");
+        JL_RFC.setOpaque(true);
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -141,12 +147,6 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
         JL_AM.setText("Marca");
         JL_AM.setOpaque(true);
 
-        JL_RFC.setBackground(new java.awt.Color(255, 204, 102));
-        JL_RFC.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
-        JL_RFC.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        JL_RFC.setText("SKU");
-        JL_RFC.setOpaque(true);
-
         JL_Payback.setBackground(new java.awt.Color(255, 204, 102));
         JL_Payback.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_Payback.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -186,7 +186,6 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
                     .addComponent(JL_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_AP, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_AM, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JL_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_Payback, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,11 +224,9 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
                     .addComponent(JL_AM, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JTF_AM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(JL_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(JTF_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(JB_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JTF_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_RFC, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JL_Payback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)

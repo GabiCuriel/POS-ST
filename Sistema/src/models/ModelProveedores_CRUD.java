@@ -84,19 +84,19 @@ public class ModelProveedores_CRUD {
     }
     public void setValues() {
         try {
-            ID = rs.getString("ID_Pr");
-            Nombre_Pr = rs.getString("Nombre_Pr");
-            Telefono = rs.getString("Tel_Pr");
+            ID = rs.getString("ID_PR");
+            Nombre_Pr = rs.getString("NOMBRE_PR");
+            Telefono = rs.getString("TEL_PR");
             Direccion = rs.getString("ID_D");
-            Email = rs.getString("Email");
+            Email = rs.getString("EMAIL_PR");
             
            
         } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error model 102: " + err.getMessage());
+            JOptionPane.showMessageDialog(null, "Error model 002: " + err.getMessage());
         }
     }
     public void Update_Registro(){
-        String update = ("Update Proveedor Set Nombre_Pr=? , Tel_Pr=? , ID_D=? , Email=?  Where ID_Pr=?");
+        String update = ("Update Proveedor Set NOMBRE_PR=? , ID_D=? , TEL_PR=? , EMAIL_PR=?  Where ID_PR=?");
      
         Connection con = conexion;
         try {
@@ -115,7 +115,7 @@ public class ModelProveedores_CRUD {
         }
     }
     public void Deletfrom(){
-        String update = ("Delete from Productos Where ID_Pr=?");
+        String update = ("Delete from Productos Where ID_PR=?");
      
         Connection con = conexion;
         try {
@@ -129,20 +129,20 @@ public class ModelProveedores_CRUD {
         }
     }
     public void Insert_Registro(){   
-     String insert = ("Insert into Productos (Nombre_Pr,Tel_Pr,ID_D,Email) values (?,?,?,?)");
+     String insert = ("Insert into proveedores (NOMBRE_PR,ID_D,TEL_PR,EMAIL_PR) values (?,?,?,?)");
      
         Connection con = conexion;
         try {
             pst = (PreparedStatement) con.prepareStatement(insert);            
             pst.setString(1, Nombre_Pr);
-            pst.setString(2, Telefono);
-            pst.setString(3, Direccion);
+            pst.setString(2, Direccion);
+            pst.setString(3, Telefono);
             pst.setString(4, Email);
                 pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Se inserto el nuevo producto");
+                JOptionPane.showMessageDialog(null, "Se inserto el nuevo proveedor");
             
         }catch(SQLException err){ 
-            JOptionPane.showMessageDialog(null, "No se pudo insertar el nuevo producto");
+            JOptionPane.showMessageDialog(null, "No se pudo insertar el nuevo proveedor");
         }
     }    
 }

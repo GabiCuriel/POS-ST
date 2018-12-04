@@ -66,7 +66,10 @@ public class Main {
         ViewUsuarios_CRUD viewUsuarios_CRUD = new ViewUsuarios_CRUD();
         ControllerUsuarios_CRUD controllerUsuarios_CRUD = new ControllerUsuarios_CRUD(modelUsuarios_CRUD, viewUsuarios_CRUD);
         
-        Object[] controllers = new Object[10];
+        ModelLogin modelLogin = new ModelLogin();
+        ViewLogin viewLogin = new ViewLogin();
+        ControllerLogin controllerLogin = new ControllerLogin(modelLogin, viewLogin);
+        Object[] controllers = new Object[11];
         controllers[0] = controllerClientes;
         controllers[1] = controllerClientes_CRUD;
         controllers[2] = controllerEmpleados;
@@ -77,6 +80,7 @@ public class Main {
         controllers[7] = controllerProveedores_CRUD;
         controllers[8] = controllerUsuarios;
         controllers[9] = controllerUsuarios_CRUD;
+        controllers[10] = controllerLogin;
         
         
         ModelPrincipal modelPrincipal = new ModelPrincipal();
