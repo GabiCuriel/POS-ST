@@ -65,6 +65,7 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
         JB_Cancelar = new javax.swing.JButton();
         JB_Eliminar = new javax.swing.JButton();
         JL_Background = new javax.swing.JLabel();
+        JL_IDD = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -336,7 +337,7 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
         );
         JP_ControlesLayout.setVerticalGroup(
             JP_ControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JP_ControlesLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_ControlesLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(JB_Nuevo)
                 .addGap(20, 20, 20)
@@ -354,6 +355,9 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
 
         JL_Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo.jpg"))); // NOI18N
         add(JL_Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1024, 580));
+
+        JL_IDD.setText("jLabel1");
+        add(JL_IDD, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void JTF_IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JTF_IDActionPerformed
@@ -378,6 +382,7 @@ public class ViewClientes_CRUD extends javax.swing.JPanel {
     public javax.swing.JLabel JL_Empleados;
     public javax.swing.JLabel JL_Ferreteria3;
     public javax.swing.JLabel JL_ID;
+    public javax.swing.JLabel JL_IDD;
     public javax.swing.JLabel JL_NoFerreteria;
     public javax.swing.JLabel JL_NoFerreteria1;
     public javax.swing.JLabel JL_Nombre;
