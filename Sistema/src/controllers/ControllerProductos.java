@@ -20,27 +20,10 @@ public class ControllerProductos {
     ActionListener actionListener = new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent P) {
-       //     if (P.getSource() == viewProductos.JB_Eliminar) {
-         //       Delete_producto();
-        //    } else if (P.getSource() == viewProductos.JB_Modificar){
-          //      Modifica_Producto();
-          //  } else if (P.getSource() == viewProductos.JB_Agregar){
-            //    Agregar_Producto();
-          //  }
-        }
-
-        private void Delete_producto() {
-            System.out.println("Delete - productos");
-        }
-
-        private void Modifica_Producto() {
-           System.out.println("Modifica - productos");
-        }
-
-        private void Agregar_Producto() {
-            System.out.println("Agrega - productos");
-        }
-
+            if (P.getSource() == viewProductos.JB_Buscar) {
+                buscar();
+            }
+        }    
     };
 
     public ControllerProductos(ModelProductos modelProductos, ViewProductos viewProductos) {
@@ -51,11 +34,15 @@ public class ControllerProductos {
     }
 
     private void initBD() {
-        
+        modelProductos.llenarTabla();
+        modelProductos.obtenerExistencias();
+        viewProductos.JT_Inventario.setModel(modelProductos.getModel());
     }
     private void setActionListener() {
-//        viewProductos.JB_Agregar.addActionListener(actionListener);
-  //      viewProductos.JB_Modificar.addActionListener(actionListener);
-    //    viewProductos.JB_Eliminar.addActionListener(actionListener);
+        
+    }
+    
+    private void buscar(){
+        
     }
 }

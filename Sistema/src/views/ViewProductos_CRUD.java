@@ -29,7 +29,7 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
 
         JL_RFC = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        JT_Productos = new javax.swing.JTable();
+        JT_Inventario = new javax.swing.JTable();
         JL_Empleados = new javax.swing.JLabel();
         JTF_Busqueda = new javax.swing.JTextField();
         JB_Buscar = new javax.swing.JButton();
@@ -44,12 +44,11 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
         JL_AP = new javax.swing.JLabel();
         JL_AM = new javax.swing.JLabel();
         JL_Payback = new javax.swing.JLabel();
-        JB_RFC = new javax.swing.JButton();
         JTF_ID = new javax.swing.JTextField();
         JTF_Nombre = new javax.swing.JTextField();
-        JTF_AM = new javax.swing.JTextField();
-        JTF_RFC = new javax.swing.JTextField();
-        JTF_Payback = new javax.swing.JTextField();
+        JTF_Marca = new javax.swing.JTextField();
+        JTF_SKU = new javax.swing.JTextField();
+        JTF_Precio = new javax.swing.JTextField();
         JCB_Tipo = new javax.swing.JComboBox<>();
         JP_Controles = new javax.swing.JPanel();
         JB_Nuevo = new javax.swing.JButton();
@@ -67,9 +66,9 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JT_Productos.setBackground(new java.awt.Color(255, 204, 51));
-        JT_Productos.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-        JT_Productos.setModel(new javax.swing.table.DefaultTableModel(
+        JT_Inventario.setBackground(new java.awt.Color(255, 204, 51));
+        JT_Inventario.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JT_Inventario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -80,7 +79,7 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
                 "ID", "Nombre", "Tipo", "Marca", "SKU", "Precio"
             }
         ));
-        jScrollPane1.setViewportView(JT_Productos);
+        jScrollPane1.setViewportView(JT_Inventario);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 943, 130));
 
@@ -153,9 +152,6 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
         JL_Payback.setText("Precio");
         JL_Payback.setOpaque(true);
 
-        JB_RFC.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        JB_RFC.setText("Generar");
-
         JTF_ID.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
         JTF_ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,14 +161,14 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
 
         JTF_Nombre.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
 
-        JTF_AM.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JTF_Marca.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
 
-        JTF_RFC.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JTF_SKU.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
 
-        JTF_Payback.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
+        JTF_Precio.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
 
         JCB_Tipo.setBackground(new java.awt.Color(255, 153, 0));
-        JCB_Tipo.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JCB_Tipo.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
         JCB_Tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Material", "Herramienta", "Maquinaria", " " }));
 
         javax.swing.GroupLayout JP_DatosLayout = new javax.swing.GroupLayout(JP_Datos);
@@ -180,7 +176,7 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
         JP_DatosLayout.setHorizontalGroup(
             JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_DatosLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(26, 26, 26)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JL_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -188,26 +184,19 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
                     .addComponent(JL_AM, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_Payback, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(JTF_Nombre, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(JTF_AM)
-                    .addGroup(JP_DatosLayout.createSequentialGroup()
-                        .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(JTF_RFC, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                            .addComponent(JTF_Payback))
-                        .addGap(10, 10, 10)
-                        .addComponent(JB_RFC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(JP_DatosLayout.createSequentialGroup()
-                        .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JTF_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JCB_Tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 147, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(JTF_SKU, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JTF_Marca, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JCB_Tipo, javax.swing.GroupLayout.Alignment.LEADING, 0, 308, Short.MAX_VALUE)
+                    .addComponent(JTF_Nombre, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JTF_ID, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JTF_Precio))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         JP_DatosLayout.setVerticalGroup(
             JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_DatosLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(39, 39, 39)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JL_ID, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JTF_ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -215,10 +204,10 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(JL_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JTF_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(15, 15, 15)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(JL_AP, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JCB_Tipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JCB_Tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_AP, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(JL_AM, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -230,11 +219,11 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(JL_Payback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(JTF_Payback, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39))
+                    .addComponent(JTF_Precio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(38, 38, 38))
         );
 
-        add(JP_Datos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 520, 310));
+        add(JP_Datos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 520, 300));
 
         JP_Controles.setBackground(new java.awt.Color(255, 204, 0));
         JP_Controles.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -299,14 +288,13 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JB_Agregar;
+    public javax.swing.JButton JB_Agregar;
     private javax.swing.JButton JB_Buscar;
-    private javax.swing.JButton JB_Cancelar;
-    private javax.swing.JButton JB_Eliminar;
-    private javax.swing.JButton JB_Modificar;
-    private javax.swing.JButton JB_Nuevo;
-    private javax.swing.JButton JB_RFC;
-    private javax.swing.JComboBox<String> JCB_Tipo;
+    public javax.swing.JButton JB_Cancelar;
+    public javax.swing.JButton JB_Eliminar;
+    public javax.swing.JButton JB_Modificar;
+    public javax.swing.JButton JB_Nuevo;
+    public javax.swing.JComboBox<String> JCB_Tipo;
     public javax.swing.JLabel JL_AM;
     public javax.swing.JLabel JL_AP;
     private javax.swing.JLabel JL_Background;
@@ -322,13 +310,13 @@ public class ViewProductos_CRUD extends javax.swing.JPanel {
     public javax.swing.JLabel JL_Usuario;
     private javax.swing.JPanel JP_Controles;
     private javax.swing.JPanel JP_Datos;
-    private javax.swing.JTextField JTF_AM;
     private javax.swing.JTextField JTF_Busqueda;
-    private javax.swing.JTextField JTF_ID;
-    private javax.swing.JTextField JTF_Nombre;
-    private javax.swing.JTextField JTF_Payback;
-    private javax.swing.JTextField JTF_RFC;
-    public javax.swing.JTable JT_Productos;
+    public javax.swing.JTextField JTF_ID;
+    public javax.swing.JTextField JTF_Marca;
+    public javax.swing.JTextField JTF_Nombre;
+    public javax.swing.JTextField JTF_Precio;
+    public javax.swing.JTextField JTF_SKU;
+    public javax.swing.JTable JT_Inventario;
     public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
