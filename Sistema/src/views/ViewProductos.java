@@ -108,7 +108,7 @@ public class ViewProductos extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton JB_Buscar;
+    public javax.swing.JButton JB_Buscar;
     private javax.swing.JLabel JL_Background;
     public javax.swing.JLabel JL_Ferreteria3;
     public javax.swing.JLabel JL_NoFerreteria;
