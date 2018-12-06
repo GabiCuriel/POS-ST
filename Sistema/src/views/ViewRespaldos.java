@@ -35,10 +35,9 @@ public class ViewRespaldos extends javax.swing.JPanel {
         JL_TipoUsuario = new javax.swing.JLabel();
         JL_Usuario = new javax.swing.JLabel();
         JP_Datos = new javax.swing.JPanel();
-        JTF_Usuario = new javax.swing.JTextField();
         JPF_Passw = new javax.swing.JPasswordField();
         JL_Password = new javax.swing.JLabel();
-        JL_User = new javax.swing.JLabel();
+        JL_Info = new javax.swing.JLabel();
         JP_Controles = new javax.swing.JPanel();
         JB_Nuevo = new javax.swing.JButton();
         JB_Modificar = new javax.swing.JButton();
@@ -92,43 +91,39 @@ public class ViewRespaldos extends javax.swing.JPanel {
         JP_Datos.setForeground(new java.awt.Color(255, 204, 0));
         JP_Datos.setOpaque(false);
 
-        JTF_Usuario.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
-        JTF_Usuario.setText("User");
-
         JPF_Passw.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        JPF_Passw.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         JPF_Passw.setText("jPasswordField1");
 
         JL_Password.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        JL_Password.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JL_Password.setText("Contraseña");
 
-        JL_User.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
-        JL_User.setText("Usuario");
+        JL_Info.setFont(new java.awt.Font("Yu Gothic", 0, 14)); // NOI18N
+        JL_Info.setText("Para poder realizar el respaldo de la base de datos ingresa tu contraseña");
 
         javax.swing.GroupLayout JP_DatosLayout = new javax.swing.GroupLayout(JP_Datos);
         JP_Datos.setLayout(JP_DatosLayout);
         JP_DatosLayout.setHorizontalGroup(
             JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_DatosLayout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JL_Password, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JTF_Usuario)
-                    .addComponent(JPF_Passw, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
-                    .addComponent(JL_User, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(108, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addGroup(JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JPF_Passw, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JL_Info))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         JP_DatosLayout.setVerticalGroup(
             JP_DatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_DatosLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(JL_User, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(JL_Info, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(JTF_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(JL_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(43, 43, 43)
                 .addComponent(JPF_Passw, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
+                .addGap(64, 64, 64))
         );
 
         add(JP_Datos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 520, 300));
@@ -197,16 +192,15 @@ public class ViewRespaldos extends javax.swing.JPanel {
     private javax.swing.JButton JB_Nuevo;
     private javax.swing.JLabel JL_Background;
     public javax.swing.JLabel JL_Ferreteria3;
+    private javax.swing.JLabel JL_Info;
     public javax.swing.JLabel JL_NoFerreteria;
     public javax.swing.JLabel JL_NoFerreteria1;
     private javax.swing.JLabel JL_Password;
     public javax.swing.JLabel JL_TipoUsuario;
-    private javax.swing.JLabel JL_User;
     public javax.swing.JLabel JL_Usuario;
     private javax.swing.JPasswordField JPF_Passw;
     private javax.swing.JPanel JP_Controles;
     private javax.swing.JPanel JP_Datos;
-    private javax.swing.JTextField JTF_Usuario;
     public javax.swing.JTable JT_Respaldos;
     public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
