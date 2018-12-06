@@ -27,8 +27,6 @@ public class ViewRespaldos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        JT_Respaldos = new javax.swing.JTable();
         JL_NoFerreteria = new javax.swing.JLabel();
         JL_NoFerreteria1 = new javax.swing.JLabel();
         JL_Ferreteria3 = new javax.swing.JLabel();
@@ -39,31 +37,12 @@ public class ViewRespaldos extends javax.swing.JPanel {
         JL_Password = new javax.swing.JLabel();
         JL_Info = new javax.swing.JLabel();
         JP_Controles = new javax.swing.JPanel();
-        JB_Nuevo = new javax.swing.JButton();
-        JB_Modificar = new javax.swing.JButton();
-        JB_Cancelar = new javax.swing.JButton();
-        JB_Eliminar = new javax.swing.JButton();
+        JB_Respaldar = new javax.swing.JButton();
+        JB_Restaurar = new javax.swing.JButton();
         JL_Background = new javax.swing.JLabel();
         JB_Buscar = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        JT_Respaldos.setBackground(new java.awt.Color(255, 204, 51));
-        JT_Respaldos.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
-        JT_Respaldos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Dia", "Mes", "Año"
-            }
-        ));
-        jScrollPane1.setViewportView(JT_Respaldos);
-
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 943, 130));
 
         JL_NoFerreteria.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
         JL_NoFerreteria.setText("1");
@@ -134,43 +113,36 @@ public class ViewRespaldos extends javax.swing.JPanel {
         JP_Controles.setToolTipText("");
         JP_Controles.setOpaque(false);
 
-        JB_Nuevo.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        JB_Nuevo.setText("Nuevo");
+        JB_Respaldar.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JB_Respaldar.setText("Respaldar");
 
-        JB_Modificar.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        JB_Modificar.setText("Respaldar");
-
-        JB_Cancelar.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        JB_Cancelar.setText("Cancelar");
-
-        JB_Eliminar.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        JB_Eliminar.setText("Eliminar");
+        JB_Restaurar.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
+        JB_Restaurar.setText("Restaurar");
+        JB_Restaurar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JB_RestaurarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout JP_ControlesLayout = new javax.swing.GroupLayout(JP_Controles);
         JP_Controles.setLayout(JP_ControlesLayout);
         JP_ControlesLayout.setHorizontalGroup(
             JP_ControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JP_ControlesLayout.createSequentialGroup()
-                .addGap(135, 135, 135)
-                .addGroup(JP_ControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(JB_Nuevo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JB_Modificar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JB_Cancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(JB_Eliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(135, 135, 135))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_ControlesLayout.createSequentialGroup()
+                .addContainerGap(122, Short.MAX_VALUE)
+                .addGroup(JP_ControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JB_Respaldar, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JB_Restaurar, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(115, 115, 115))
         );
         JP_ControlesLayout.setVerticalGroup(
             JP_ControlesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_ControlesLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(JB_Nuevo)
-                .addGap(38, 38, 38)
-                .addComponent(JB_Modificar)
-                .addGap(38, 38, 38)
-                .addComponent(JB_Cancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(JB_Eliminar)
-                .addGap(34, 34, 34))
+                .addGap(82, 82, 82)
+                .addComponent(JB_Respaldar)
+                .addGap(79, 79, 79)
+                .addComponent(JB_Restaurar)
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         add(JP_Controles, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 60, 400, 300));
@@ -183,13 +155,15 @@ public class ViewRespaldos extends javax.swing.JPanel {
         add(JB_Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 20, 70, -1));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void JB_RestaurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JB_RestaurarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JB_RestaurarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JB_Buscar;
-    private javax.swing.JButton JB_Cancelar;
-    private javax.swing.JButton JB_Eliminar;
-    private javax.swing.JButton JB_Modificar;
-    private javax.swing.JButton JB_Nuevo;
+    private javax.swing.JButton JB_Respaldar;
+    private javax.swing.JButton JB_Restaurar;
     private javax.swing.JLabel JL_Background;
     public javax.swing.JLabel JL_Ferreteria3;
     private javax.swing.JLabel JL_Info;
@@ -201,7 +175,5 @@ public class ViewRespaldos extends javax.swing.JPanel {
     private javax.swing.JPasswordField JPF_Passw;
     private javax.swing.JPanel JP_Controles;
     private javax.swing.JPanel JP_Datos;
-    public javax.swing.JTable JT_Respaldos;
-    public javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
