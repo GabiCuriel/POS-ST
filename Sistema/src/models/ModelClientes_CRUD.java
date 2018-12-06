@@ -10,7 +10,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.util.Arrays;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -188,7 +187,7 @@ public class ModelClientes_CRUD {
     
     public void concatenarDireccionSQL(){
         try{
-            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NO_INT_D, direcciones.NO_EXT_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D;";
+            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NUMERO_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D;";
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
             String direccion = "";
@@ -228,8 +227,32 @@ public class ModelClientes_CRUD {
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Registro exitoso! :)");
         }catch(SQLException err){ 
-            JOptionPane.showMessageDialog(null,"Error ModelClientes 001: "+ err.getMessage());
+            JOptionPane.showMessageDialog(null,"Error ModelClientes 004: "+ err.getMessage());
         }
     }
     
+    public void eliminarRegistro(){
+        String sql = ("DELETE FROM clientes WHERE `ID_CL`=?;");
+        Connection conec = conn;
+        try{
+            ps = (PreparedStatement) conn.prepareStatement(sql);
+            ps.setString(1, this.getID_CL());
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null, "Registro eliminado con exito! :)");
+        }catch(SQLException err){ 
+            JOptionPane.showMessageDialog(null,"Error ModelClientes 005: "+ err.getMessage());
+        }
+    }
+    public void obtenerIDD(){
+        String sql = "SELECT ID_D FROM clientes WHERE ID_CL = ?;";
+        try{
+            ps = (PreparedStatement) conn.prepareStatement(sql);
+            ps.setString(1, this.getID_CL());
+            rs = ps.executeQuery();
+            rs.next();
+            this.ID_D = rs.getString("ID_D");
+        }catch(SQLException err){ 
+            JOptionPane.showMessageDialog(null,"Error ModelClientes_CRUD 006: "+ err.getMessage());
+        }
+    }
 }
