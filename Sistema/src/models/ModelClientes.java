@@ -170,7 +170,6 @@ public class ModelClientes {
                 this.modelo.addRow(filas);
                 
             }
-            con.close();
         } catch (SQLException err){
             JOptionPane.showMessageDialog(null,"Error ModelClientes 001: "+ err.getMessage());
         }
@@ -182,7 +181,7 @@ public class ModelClientes {
             ResultSet rs = null;
             Conexion conn = new Conexion();
             Connection con = conn.getConexion();
-            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NO_INT_D, direcciones.NO_EXT_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D;";
+            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NUMERO_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D;";
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             String direccion = "";
@@ -250,7 +249,7 @@ public class ModelClientes {
             ResultSet rrs = null;
             Conexion conn = new Conexion();
             Connection con = conn.getConexion();
-            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NO_INT_D, direcciones.NO_EXT_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D, direcciones.ID_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D WHERE clientes.NOMBRE_CL = '"+value+"';";
+            String sql = "SELECT direcciones.CALLE_D, direcciones.COL_D, direcciones.NUMERO_D, direcciones.CD_D, direcciones.CP_D, direcciones.EDO_D, direcciones.ID_D FROM direcciones INNER JOIN clientes ON clientes.ID_D = direcciones.ID_D WHERE clientes.NOMBRE_CL = '"+value+"';";
             pps = con.prepareStatement(sql);
             rrs = pps.executeQuery();
             String direccion = "";
