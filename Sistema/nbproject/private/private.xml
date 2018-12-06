@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="3"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/controllers/ControllerClientes.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/controllers/ControllerClientes_CRUD.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/views/ViewClientes_CRUD.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/ModelClientes_CRUD.java</file>
-            <file>file:/C:/Users/TeddyBear/Documents/GitHub/POS-ST/Sistema/src/models/Conexion.java</file>
-=======
-            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/models/ModelEmpleados_CRUD.java</file>
-            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/models/ModelSucursales_CRUD.java</file>
-            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/models/ModelUsuarios_CRUD.java</file>
->>>>>>> d9428f535f42840eaac7f211ec8a4dddeeab2359
-        </group>
+        <group/>
     </open-files>
 </project-private>
