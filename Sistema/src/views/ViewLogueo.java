@@ -31,9 +31,9 @@ public class ViewLogueo extends javax.swing.JFrame {
         JP_Loguin = new javax.swing.JPanel();
         JL_IconoAcceso = new javax.swing.JLabel();
         JTF_Usuario = new javax.swing.JTextField();
-        JTF_Password = new javax.swing.JTextField();
         JB_Loguear = new javax.swing.JButton();
         JL_IconoUser = new javax.swing.JLabel();
+        JTF_Password = new javax.swing.JPasswordField();
         JL_Background = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
@@ -49,10 +49,6 @@ public class ViewLogueo extends javax.swing.JFrame {
         JTF_Usuario.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         JTF_Usuario.setText("Usuario");
 
-        JTF_Password.setFont(new java.awt.Font("Dubai", 0, 18)); // NOI18N
-        JTF_Password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        JTF_Password.setText("Contraseña");
-
         JB_Loguear.setBackground(new java.awt.Color(255, 255, 255));
         JB_Loguear.setFont(new java.awt.Font("Dubai", 0, 18)); // NOI18N
         JB_Loguear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/login.png"))); // NOI18N
@@ -60,6 +56,11 @@ public class ViewLogueo extends javax.swing.JFrame {
         JB_Loguear.setToolTipText("");
 
         JL_IconoUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/usuario.png"))); // NOI18N
+
+        JTF_Password.setFont(new java.awt.Font("Dubai", 0, 18)); // NOI18N
+        JTF_Password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        JTF_Password.setText("Contraseña");
+        JTF_Password.setToolTipText("");
 
         javax.swing.GroupLayout JP_LoguinLayout = new javax.swing.GroupLayout(JP_Loguin);
         JP_Loguin.setLayout(JP_LoguinLayout);
@@ -72,9 +73,9 @@ public class ViewLogueo extends javax.swing.JFrame {
                     .addGroup(JP_LoguinLayout.createSequentialGroup()
                         .addComponent(JL_IconoAcceso)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(JP_LoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(JTF_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(JTF_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(JP_LoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(JTF_Usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
+                            .addComponent(JTF_Password))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JP_LoguinLayout.createSequentialGroup()
                 .addContainerGap(106, Short.MAX_VALUE)
@@ -84,18 +85,18 @@ public class ViewLogueo extends javax.swing.JFrame {
         JP_LoguinLayout.setVerticalGroup(
             JP_LoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JP_LoguinLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(53, 53, 53)
                 .addComponent(JL_IconoUser)
-                .addGap(70, 70, 70)
+                .addGap(57, 57, 57)
                 .addGroup(JP_LoguinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(JL_IconoAcceso)
                     .addGroup(JP_LoguinLayout.createSequentialGroup()
                         .addComponent(JTF_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(JTF_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(29, 29, 29)
+                        .addComponent(JTF_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(34, 34, 34)
                 .addComponent(JB_Loguear, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         getContentPane().add(JP_Loguin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 340, 440));
@@ -148,7 +149,7 @@ public class ViewLogueo extends javax.swing.JFrame {
     private javax.swing.JLabel JL_IconoAcceso;
     private javax.swing.JLabel JL_IconoUser;
     private javax.swing.JPanel JP_Loguin;
-    public javax.swing.JTextField JTF_Password;
+    public javax.swing.JPasswordField JTF_Password;
     public javax.swing.JTextField JTF_Usuario;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
