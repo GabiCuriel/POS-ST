@@ -16,10 +16,10 @@ import java.sql.Statement;
  * @author TeddyBear
  */
 public class Conexion {
-    private final String base = "soultech";
-    private final String user = "root";
-    private final String password = "";
-    private final String url = "jdbc:mysql://localhost/" + base;
+    private final String base = "soultech"; //soultech
+    private final String user = "root"; //soultech
+    private final String password = ""; //Soul_tech
+    private final String url = "jdbc:mysql://localhost/" + base; //noutectyspdf.ddns.net:3306
     private Connection con;
     static Statement st = null;
     static ResultSet rs;

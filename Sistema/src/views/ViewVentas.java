@@ -37,10 +37,8 @@ public class ViewVentas extends javax.swing.JPanel {
         JL_IVA = new javax.swing.JLabel();
         JL_Total = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        JL_Nombre_Proveedor = new javax.swing.JLabel();
-        JTF_Nombre_Proveedor = new javax.swing.JTextField();
-        JTF_ID_Proveedor = new javax.swing.JTextField();
-        JL_ID_Proveedor = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        JT_Detalle = new javax.swing.JTable();
         JL_Ventas = new javax.swing.JLabel();
         JB_Realizar = new javax.swing.JButton();
         JB_Agregar = new javax.swing.JButton();
@@ -76,10 +74,12 @@ public class ViewVentas extends javax.swing.JPanel {
 
         jTextField1.setBackground(new java.awt.Color(255, 153, 0));
         jTextField1.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        jTextField1.setBorder(null);
         jTextField1.setSelectionColor(new java.awt.Color(255, 153, 0));
 
         jTextField2.setBackground(new java.awt.Color(255, 153, 0));
         jTextField2.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        jTextField2.setBorder(null);
         jTextField2.setSelectionColor(new java.awt.Color(255, 153, 0));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +89,7 @@ public class ViewVentas extends javax.swing.JPanel {
 
         JTF_Total.setBackground(new java.awt.Color(255, 153, 0));
         JTF_Total.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
+        JTF_Total.setBorder(null);
         JTF_Total.setSelectionColor(new java.awt.Color(255, 153, 0));
 
         JL_Total_sin_IVA.setFont(new java.awt.Font("Yu Gothic", 0, 18)); // NOI18N
@@ -130,7 +131,7 @@ public class ViewVentas extends javax.swing.JPanel {
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_Total_sin_IVA)
                     .addComponent(JL_IVA))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(JP_TotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(JTF_Total, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(JL_Total))
@@ -142,34 +143,38 @@ public class ViewVentas extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 204, 51));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        JT_Detalle.setBackground(new java.awt.Color(255, 204, 0));
+        JT_Detalle.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Cantidad", "Producto", "Precio"
+            }
+        ));
+        jScrollPane2.setViewportView(JT_Detalle);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 486, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 490, 300));
-
-        JL_Nombre_Proveedor.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        JL_Nombre_Proveedor.setText("Nombre");
-        add(JL_Nombre_Proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, -1, -1));
-
-        JTF_Nombre_Proveedor.setBackground(new java.awt.Color(255, 204, 0));
-        JTF_Nombre_Proveedor.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        add(JTF_Nombre_Proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 110, 130, -1));
-
-        JTF_ID_Proveedor.setBackground(new java.awt.Color(255, 204, 0));
-        JTF_ID_Proveedor.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        add(JTF_ID_Proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, 40, -1));
-
-        JL_ID_Proveedor.setFont(new java.awt.Font("Yu Gothic", 0, 12)); // NOI18N
-        JL_ID_Proveedor.setText("ID Proveedor");
-        add(JL_ID_Proveedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, -1, -1));
 
         JL_Ventas.setFont(new java.awt.Font("Yu Gothic Light", 0, 18)); // NOI18N
         JL_Ventas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -238,23 +243,21 @@ public class ViewVentas extends javax.swing.JPanel {
     private javax.swing.JButton JB_Realizar;
     private javax.swing.JLabel JL_Background;
     public javax.swing.JLabel JL_Ferreteria3;
-    private javax.swing.JLabel JL_ID_Proveedor;
     private javax.swing.JLabel JL_IVA;
     public javax.swing.JLabel JL_NoFerreteria;
     public javax.swing.JLabel JL_NoFerreteria1;
-    private javax.swing.JLabel JL_Nombre_Proveedor;
     public javax.swing.JLabel JL_TipoUsuario;
     private javax.swing.JLabel JL_Total;
     private javax.swing.JLabel JL_Total_sin_IVA;
     public javax.swing.JLabel JL_Usuario;
     public javax.swing.JLabel JL_Ventas;
     private javax.swing.JPanel JP_Total;
-    private javax.swing.JTextField JTF_ID_Proveedor;
-    private javax.swing.JTextField JTF_Nombre_Proveedor;
     private javax.swing.JTextField JTF_Total;
     private javax.swing.JTable JT_Compras;
+    private javax.swing.JTable JT_Detalle;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables

@@ -22,7 +22,9 @@ public class ControllerEmpleados {
     ActionListener actionListener = new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+            if(e.getSource() == viewEmpleados.JB_Buscar){
+                buscar();
+            }
         }
         
     };
@@ -30,13 +32,25 @@ public class ControllerEmpleados {
         this.modelEmpleados = modelEmpleados;
         this.viewEmpleados = viewEmpleados;
         setActionListener();
-        initBD();
+        init();
     }
     
     private void setActionListener(){
-        
+        viewEmpleados.JB_Buscar.addActionListener(actionListener);
     }
-    private void initBD(){
+    
+    private void buscar(){
+        modelEmpleados.buscar(viewEmpleados.JTF_Busqueda.getText());
+        modelEmpleados.concatenarDireccionB(viewEmpleados.JTF_Busqueda.getText());
+        modelEmpleados.obtenerDatosBancariosB(viewEmpleados.JTF_Busqueda.getText());
+        viewEmpleados.JT_Empleados.setModel(modelEmpleados.getModelo());
+    }
+    
+    private void init(){
+        modelEmpleados.llenarTabla();
+        modelEmpleados.concatenarDireccion();
+        modelEmpleados.obtenerDatosBancarios();
+        viewEmpleados.JT_Empleados.setModel(modelEmpleados.getModelo());
     }
     
     
