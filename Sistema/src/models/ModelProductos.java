@@ -10,171 +10,170 @@ package models;
  * @author Juan Pablo
  */
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import javax.swing.JOptionPane;
 import java.sql.PreparedStatement;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 public class ModelProductos {
-    private Connection conexion;
-    private Statement st;
-    private ResultSet rs;
-    private PreparedStatement pst;
 
-    private String ID;
-    private String Nombre;
-    private String SKU;
-    private String Proveedor;
-    private String Tipo;
-    private String Precio;
-    private String Marca;
-    private String Cantidad;
+    private PreparedStatement ps = null;
+    private ResultSet rs = null;
+    private Conexion con = new Conexion();
+    private Connection conn = con.getConexion();
+    
+    private String ID_P;
+    private String Nombre_P;
+    private String Tipo_P;
+    private String Marca_P;
+    private String SKU_P;
+    private String Precio_P;
+    private String ID_F;
+    private String Existencia_FP;
 
-    public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
-    public String getNombre() {
-        return Nombre;
+    DefaultTableModel model = new DefaultTableModel();
+    
+    int cantColu;
+    
+    public String getID_P() {
+        return ID_P;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setID_P(String ID_P) {
+        this.ID_P = ID_P;
     }
 
-    public String getSKU() {
-        return SKU;
+    public String getNombre_P() {
+        return Nombre_P;
     }
 
-    public void setSKU(String SKU) {
-        this.SKU = SKU;
+    public void setNombre_P(String Nombre_P) {
+        this.Nombre_P = Nombre_P;
     }
 
-    public String getProveedor() {
-        return Proveedor;
+    public String getTipo_P() {
+        return Tipo_P;
     }
 
-    public void setProveedor(String Proveedor) {
-        this.Proveedor = Proveedor;
+    public void setTipo_P(String Tipo_P) {
+        this.Tipo_P = Tipo_P;
     }
 
-    public String getTipo() {
-        return Tipo;
+    public String getMarca_P() {
+        return Marca_P;
     }
 
-    public void setTipo(String Tipo) {
-        this.Tipo = Tipo;
+    public void setMarca_P(String Marca_P) {
+        this.Marca_P = Marca_P;
     }
 
-    public String getPrecio() {
-        return Precio;
+    public String getSKU_P() {
+        return SKU_P;
     }
 
-    public void setPrecio(String Precio) {
-        this.Precio = Precio;
+    public void setSKU_P(String SKU_P) {
+        this.SKU_P = SKU_P;
     }
 
-    public String getMarca() {
-        return Marca;
+    public String getPrecio_P() {
+        return Precio_P;
     }
 
-    public void setMarca(String Marca) {
-        this.Marca = Marca;
+    public void setPrecio_P(String Precio_P) {
+        this.Precio_P = Precio_P;
     }
 
-    public String getCantidad() {
-        return Cantidad;
+    public String getID_F() {
+        return ID_F;
     }
 
-    public void setCantidad(String Cantidad) {
-        this.Cantidad = Cantidad;
+    public void setID_F(String ID_F) {
+        this.ID_F = ID_F;
     }
-    public void conectarDB() {
-        try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/Soul_Tech");
-            st = conexion.createStatement();
-            String sql = "SELECT * FROM Productos;";
-            System.out.println(sql);
-            rs = st.executeQuery(sql);
-            rs.next();
-            setValues();
-        } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error ModelProductos 001: " + err.getMessage());
-        }
+
+    public String getExistencia_FP() {
+        return Existencia_FP;
     }
-    public void setValues() {
-        try {
-            ID = rs.getString("ID_p");
-            Nombre = rs.getString("Nombre_P");
-            Proveedor = rs.getString("ID_Proveedor");
-            SKU = rs.getString("SKU");
-            Tipo = rs.getString("Tipo");
-            Precio = rs.getString("Precio");
-            Marca = rs.getString("Marca");
-            Cantidad = rs.getString("Cantidad_P");
-        } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error model 102: " + err.getMessage());
-        }
+
+    public void setExistencia_FP(String Existencia_FP) {
+        this.Existencia_FP = Existencia_FP;
     }
-    public void Update_Registro(){
-        String update = ("Update Productos Set Nombre_P=? , SKU=? , Tipo=? , Precio=? , Marca=?  Where ID_P=?");
-     
-        Connection con = conexion;
-        try {
-            pst = (PreparedStatement) con.prepareStatement(update);            
-            pst.setString(1, Nombre);
-            pst.setString(2, SKU);
-            pst.setString(3, Tipo);
-            pst.setString(4, Precio);
-            pst.setString(5, Marca);
-            pst.setString(6, ID);
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Se actualizó el registro");
+
+    public DefaultTableModel getModel() {
+        return model;
+    }
+
+    public void setModel(DefaultTableModel model) {
+        this.model = model;
+    }
+
+    public int getCantColu() {
+        return cantColu;
+    }
+
+    public void setCantColu(int cantColu) {
+        this.cantColu = cantColu;
+    }
+    
+    
+    
+    public void llenarTabla(){
+        model = new DefaultTableModel();
+        model.addColumn("ID");
+        model.addColumn("Nombre");
+        model.addColumn("Tipo");
+        model.addColumn("Marca");
+        model.addColumn("SKU");
+        model.addColumn("Precio");
+        model.addColumn("Existencia");
+        
+        String sql = "SELECT * FROM productos;";
+        try{
+            System.out.println("Modelo - verProductos - llenarTabla");
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            ResultSetMetaData rsMd = rs.getMetaData();
+            this.setCantColu(rsMd.getColumnCount());
             
+            while(rs.next()){
+                Object[] filas = new Object[this.cantColu];
+                for (int i = 0;  i < this.cantColu; i++){
+                    filas[i] = rs.getObject(i+1);
+                }
+                this.model.addRow(filas);
+            }
         }catch(SQLException err){ 
-            JOptionPane.showMessageDialog(null, "No se pudo actualizar");
+            JOptionPane.showMessageDialog(null,"Error ModelEmpleados 001: "+ err.getMessage());
         }
     }
-    public void Deletfrom(){
-        String update = ("Delete from Productos Where ID_P=?");
-     
-        Connection con = conexion;
-        try {
-            pst = (PreparedStatement) con.prepareStatement(update);            
-            pst.setString(1, ID);
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Se Eliminó el registro");
-            
+    
+    public void obtenerExistencias(){
+        String sql = "SELECT ferreteria_productos.EXISTENCIA_FP FROM ferreteria_productos INNER JOIN productos ON ferreteria_productos.ID_P = productos.ID_P;";
+        try{
+            System.out.println("Modelo - verProductos - obtenerExistencias");
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            ResultSetMetaData rsMd = rs.getMetaData();
+            this.setCantColu(rsMd.getColumnCount());
+            int x=0;
+            while(rs.next()){
+                Object[] filas = new Object[this.cantColu];
+                String existencia = "";
+                for (int i = 0;  i < this.cantColu; i++){
+                    filas[i] = rs.getObject(i+1);
+                    existencia += filas[i];
+                }
+                model.setValueAt(existencia, x, 6);
+                x++;
+            }
         }catch(SQLException err){ 
-            JOptionPane.showMessageDialog(null, "No se pudo eliminar el registro");
+            JOptionPane.showMessageDialog(null,"Error ModelEmpleados 001: "+ err.getMessage());
         }
     }
-    public void Insert_Registro(){   
-     String insert = ("Insert into Productos (Nombre_P,SKU,Tipo,Precio,Marca,ID_Proveedor) values (?,?,?,?,?,?)");
-     
-        Connection con = conexion;
-        try {
-            pst = (PreparedStatement) con.prepareStatement(insert);            
-            pst.setString(1, Nombre);
-            pst.setString(2, SKU);
-            pst.setString(3, Tipo);
-            pst.setString(4, Precio);
-            pst.setString(5, Marca);
-            pst.setString(6, Proveedor);
-            
-                pst.executeUpdate();
-                JOptionPane.showMessageDialog(null, "Se inserto el nuevo producto");
-            
-        }catch(SQLException err){ 
-            JOptionPane.showMessageDialog(null, "No se pudo insertar el nuevo producto");
-        }
-    }    
+
+    
 }
 
