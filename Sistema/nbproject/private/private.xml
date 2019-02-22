@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+<<<<<<< HEAD
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/controllers/ControllerSucursales.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewUsuarios.java</file>
+            <file>file:/C:/Users/Gabi%20Curiel/Documents/GitHub/SoulTech/Sistema/src/views/ViewSucursales_CRUD.java</file>
+=======
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="3"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/models/ModelLogin.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewCompras.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/models/ModelLogueo.java</file>
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/controllers/ControllerLogin.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/usuario%201/Documents/GitHub/SoulTech/Sistema/src/models/Conexion.java</file>
+=======
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewVentas.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewLogin.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewSucursales_CRUD.java</file>
+            <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/main/Main.java</file>
+>>>>>>> d5bb68b4f6cc4b1a7ae3d8f9dc251e5f7b340cdb
             <file>file:/C:/Users/Juan%20Pablo/Documents/GitHub/SoulTech/Sistema/src/views/ViewRespaldos.java</file>
+>>>>>>> da3cfe5ef5bf94239ab0adbe9a318e31ae339cf4
+>>>>>>> e16588c66b8c4e49e2c13b48bebce0f1feda7ecc
         </group>
     </open-files>
 </project-private>
