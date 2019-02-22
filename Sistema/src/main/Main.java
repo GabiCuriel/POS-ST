@@ -21,7 +21,6 @@ public class Main {
         ControllerLogueo controllerLogueo = new ControllerLogueo(modelLogueo, viewLogueo);
         System.out.println(modelLogueo.isValue());
         while (true){
-            System.out.println("#####");
             if (modelLogueo.isValue() == true){
                 System.out.println(modelLogueo.isValue());
                 Constructores constructores = new Constructores();
